@@ -1,0 +1,4 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+Redirect 301 /discord https://discord.com/users/757632120507072675
+</IfModule>
