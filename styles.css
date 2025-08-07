@@ -13,15 +13,8 @@ body {
   border-radius: 10px;
   text-align: center;
   
-  width:  if(
-    media(width > height: 75vw); /* vertical screen*/
-    else: 50vw;
-    );
-    
-  height: if(
-    media(width > height: 10vh);
-    else: 5vh;
-    );
+  width: if(vw >= vh: 50vw; vw < vh: 75vw);
+  height: if(vw >= vh: 10vh; vw < vh: 5vh);
     
   border: 5px solid #ffffff;
   /* Make border visible */
