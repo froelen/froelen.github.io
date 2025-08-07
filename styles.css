@@ -13,8 +13,17 @@ body {
   border-radius: 10px;
   text-align: center;
   
-  width: if(vw >= vh: 50vw; vw < vh: 75vw);
-  height: if(vw >= vh: 10vh; vw < vh: 5vh);
+  width:50vw; /* remove when if() support on other browsers */
+  width: if(
+    media(orientation = portrait): 75vw;
+    else: 50vw;
+    );
+
+  height:5vh; /* remove when if() support on other browsers */
+  height: if(
+    media(orientation = portrait):10vh;
+    else: 5vh;
+    );
     
   border: 5px solid #ffffff;
   /* Make border visible */
