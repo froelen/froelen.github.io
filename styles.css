@@ -1,4 +1,4 @@
-body {
+.main {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -31,4 +31,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#main-header {
+  background-color: black;
+  color: white;
+  justify-content:left;
 }
