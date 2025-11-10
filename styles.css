@@ -3,12 +3,17 @@
 }
 
 #main-header {
+  display: inline-block;
   color: #ffffff;
   font-family: "Arial";
-  font-size: 80%;
+  font-size: 1em/* https://www.w3.org/Style/Examples/007/units.en.html */;
+  border-bottom-style: solid;
+  border-bottom-color: #EFBDEB;
+  border-bottom-width: 0.5vh;
+  padding-bottom: 0.5vh
 }
 
-#h1-name {
+#main-header-username {
   color: #EFBDEB;
   font-family: "Trebuchet MS";
   font-size: 120%;
@@ -59,9 +64,10 @@
   align-items: center;
   justify-content: center;
 }
-
+/*
 #main-header {
   background-color: black;
   color: white;
   justify-content:left;
 }
+*/
