@@ -5,13 +5,14 @@
 #main-header {
   color: #ffffff;
   font-family: "Arial";
-  font-size: 20px;
+  font-size: 80%;
 }
 
 #h1-name {
   color: #EFBDEB;
   font-family: "Trebuchet MS";
-  font-size: 20px;
+  font-size: 120%;
+  font-style: italic;
   text-align: left;
 }
 
