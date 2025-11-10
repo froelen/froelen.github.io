@@ -1,9 +1,30 @@
+* {
+  background-color: #030027;
+}
+
+#main-header {
+  color: #ffffff;
+}
+
+#h1-name {
+  color: #EFBDEB;
+  font-family: "Trebuchet"
+  text-align: left;
+}
+
+
+
+
 .main {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0;
+}
+
+#h1-name {
+  color:white
 }
 
 #build {
