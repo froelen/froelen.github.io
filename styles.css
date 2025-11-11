@@ -1,73 +1,63 @@
 * {
-  background-color: #030027;
+    background-color: #030027;
 }
 
-#main-header {
-  display: inline-block;
-  color: #ffffff;
-  font-family: "Arial";
-  font-size: 1em/* https://www.w3.org/Style/Examples/007/units.en.html */;
-  border-bottom-style: solid;
-  border-bottom-color: #EFBDEB;
-  border-bottom-width: 0.5vh;
-  padding-bottom: 0.5vh
+#title {
+    border-top: solid #EFBDEB 0.25rem;
+    margin-top: 2vh;
 }
 
-#main-header-username {
-  color: #EFBDEB;
-  font-family: "Trebuchet MS";
-  font-size: 120%;
-  font-style: italic;
-  text-align: left;
+#title-section {
+    display: inline-block;
+    text-align: left;
+    color: #ffffff;
+    font-family: "Arial";
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    border-bottom: solid #EFBDEB 0.35rem;
+    border-left: solid #EFBDEB 0.35rem;
+    margin: 1.5rem 25vw 0vh 25vw;
+    width: auto;
+    /*margin: 0px;
+  margin-bottom: 0vh;
+  margin-top: 1.5rem;
+  margin-left: 25vw;
+  margin-right: 25vw;*/
 }
 
-
-
-
-
-
-.main {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
+#title-section-text {
+    font-weight: bold;
 }
 
-#h1-name {
-  color:white
+#title-section-username {
+    color: #EFBDEB;
+    font-family: "Trebuchet MS";
+    font-size: 120%;
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
 }
 
-#build {
-  padding: 10px;
-  background-color: #501212;
-  color: #ffffff;
-  border-radius: 10px;
-  text-align: center;
-  
-  width:50vw; /* remove when if() support on other browsers */
-  width: if(
-    media(orientation = portrait): 75vw;
-    else: 50vw;
-    );
+#introduction {
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 1rem;
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
 
-  height:5vh; /* remove when if() support on other browsers */
-  height: if(
-    media(orientation = portrait):10vh;
-    else: 5vh;
-    );
-    
-  border: 5px solid #ffffff;
-  /* Make border visible */
-  font-size: 1.3em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media (orientation: portrait) {
+    #title-section {
+        margin: 1.5rem auto 0vh;
+        display: block;
+        text-align: center;
+        padding-left: 0rem;
+        border: initial;
+    }
+
+    #introduction {
+        text-align: justify;
+        margin: 0 5vw 0 5vw;
+    }
 }
-/*
-#main-header {
-  background-color: black;
-  color: white;
-  justify-content:left;
-}
-*/

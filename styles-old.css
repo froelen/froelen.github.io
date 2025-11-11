@@ -1,0 +1,92 @@
+* {
+  background-color: #030027;
+}
+
+#header {
+  border-top: solid #EFBDEB 0.25rem;
+  margin-top: 2vh;
+}
+
+#main-header {
+  margin: if(media(orientation=portrait): 1.5rem auto 0vh auto; else: 1.5rem 25vw 0vh 25vw; );
+  width: if(media(orientation=portrait): 75vw; else: auto; );
+}
+
+#main-header {
+  display: inline-block;
+  text-align: if(media(orientation=portrait): center; else: left; );
+  color: #ffffff;
+  font-family: "Arial";
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: if(media(orientation=portrait): 0rem; else: 0.5rem; );
+  border-bottom: solid #EFBDEB 0.35rem;
+  border-left: if(media(orientation=portrait): transparent;
+      else: solid #EFBDEB 0.35rem; );
+  /*margin: 0px;
+  margin-bottom: 0vh;
+  margin-top: 1.5rem;
+  margin-left: 25vw;
+  margin-right: 25vw;*/
+}
+
+#main-header-text {
+  font-weight: bold;
+}
+
+#main-header-username {
+  color: #EFBDEB;
+  font-family: "Trebuchet MS";
+  font-size: 120%;
+  font-style: italic;
+  font-weight: bold;
+  text-align: left;
+}
+
+#introduction {
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 1rem;
+  margin-left: 25vw;
+  margin-right: 25vw;
+
+  margin-left: if(media(orientation=portrait): 5vw; else: 25vw; );
+  margin-right: if(media(orientation=portrait): 5vw; else: 25vw; );
+}
+
+/* ########################################################### */
+
+
+/*
+#build {
+  padding: 10px;
+  background-color: #501212;
+  color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+
+  width: 50vw;
+  width: if(media(orientation=portrait): 75vw;
+      else: 50vw;
+    );
+
+  height: 5vh;
+  height: if(media(orientation=portrait):10vh;
+      else: 5vh;
+    );
+
+  border: 5px solid #ffffff;
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+*/
+
+/*
+#main-header {
+  background-color: black;
+  color: white;
+  justify-content:left;
+}
+*/
