@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+
+* {
+    font-family: "Google Sans Flex";
+}
+
+body {
+    background-color: aliceblue;
+}
+
+#app-list {
+    background: #eee;
+    padding: 10px;
+    border-radius: 28px;
+    font-size: 0;
+    width: 1030px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.app,
+.app:visited {
+    color: #000;
+    background: #fff;
+    height: 50px;
+    width: 218px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    /* space between icon and text */
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 18px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.app:hover {
+    background: #e8eaed;
+}
+
+.app:focus {
+    outline: 2px solid #1a73e8;
+    outline-offset: 2px;
+}
+
+/* Optional: make it feel "pressed" */
+.app:active {
+    background: #dadce0;
+}
+
+#google-messages {
+    margin: 0 5px 5px 0;
+}
+
+#whatsapp,
+#discord {
+    margin: 0 5px 5px 5px;
+}
+
+#temp {
+    margin: 5px 5px 5px 5px;
+}
+
+#proton-mail {
+    margin: 0 0 5px 5px;
+}
+
+.app-title {
+    margin: 0 auto;
+    justify-content: center;
+}
