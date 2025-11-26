@@ -11,44 +11,65 @@
 <body>
     <h1>App Launcher</h1>
     <div id="app-list">
-        <a class="app" id="google-messages" href="https://messages.google.com/web" target="_blank">
-            <img src="./ressources/google-messages.svg" alt="Google Messages" width="36" height="36">
-            <span class="app-title">Google Messages</span>
-        </a>
-        <a class="app" id="whatsapp" href="https://web.whatsapp.com" target="_blank">
-            <img src="./ressources/whatsapp.svg" alt="WhatsApp" width="36" height="36">
-            <span class="app-title">WhatsApp</span>
-        </a>
-        <a class="app" id="discord" href="https://discord.com/channels/@me" target="_blank">
-            <img src="./ressources/discord.svg" alt="Discord" width="36" height="36">
-            <span class="app-title">Discord</span>
-        </a>
-        <a class="app" id="proton-mail" href="https://mail.proton.me" target="_blank">
-            <img src="./ressources/proton-mail.svg" alt="Proton Mail" width="36" height="36">
-            <span class="app-title">Proton Mail</span>
-        </a>
-        <a class="app" id="temp" href="https://web.whatsapp.com" target="_blank">
-            <img src="./ressources/whatsapp.svg" alt="WhatsApp" width="36" height="36">
-            <span class="app-title">WhatsApp4</span>
-        </a>
-        <a class="app" id="temp" href="https://web.whatsapp.com" target="_blank">
-            <img src="./ressources/whatsapp.svg" alt="WhatsApp" width="36" height="36">
-            <span class="app-title">WhatsApp5</span>
-        </a>
-        <a class="app" id="temp" href="https://web.whatsapp.com" target="_blank">
-            <img src="./ressources/whatsapp.svg" alt="WhatsApp" width="36" height="36">
-            <span class="app-title">WhatsApp6</span>
-        </a>
-        <a class="app" id="temp" href="https://web.whatsapp.com" target="_blank">
-            <img src="./ressources/whatsapp.svg" alt="WhatsApp" width="36" height="36">
-            <span class="app-title">WhatsApp7</span>
-        </a>
+        <div id="row-1">
+            <a class="app" id="google-messages" href="https://messages.google.com/web" target="_blank">
+                <img src="./ressources/google-messages.svg" alt="Google Messages" width="36" height="36">
+                <span class="app-title">Google Messages</span>
+            </a>
+            <a class="app" id="discord" href="#">
+                <img src="./ressources/discord.svg" alt="Discord" width="36" height="36">
+                <span class="app-title">Discord</span>
+            </a>
+            <a class="app" id="whatsapp" href="https://web.whatsapp.com" target="_blank">
+                <img src="./ressources/whatsapp.svg" alt="WhatsApp" width="36" height="36">
+                <span class="app-title">WhatsApp</span>
+            </a>
+            <a class="app" id="hytale" href="https://hytale.com" target="_blank">
+                <img src="./ressources/hytale.png" alt="Hytale" width="36" height="36">
+                <span class="app-title">Hytale</span>
+            </a>
+        </div>
+        <div id="row-2">
+            <a class="app" id="google-settings" href="https://myactivity.google.com/more-activity" target="_blank">
+                <img src="./ressources/google.svg" alt="Google" width="36" height="36">
+                <span class="app-title">Google Settings</span>
+            </a>
+            <a class="app" id="proton-mail" href="https://mail.proton.me" target="_blank">
+                <img src="./ressources/proton-mail.svg" alt="Proton Mail" width="36" height="36">
+                <span class="app-title">Proton Mail</span>
+            </a>
+            <a class="app" id="vscode" href="#">
+                <img src="./ressources/vscode.svg" alt="Visual Studio Code" width="36" height="36">
+                <span class="app-title">VSCode</span>
+            </a>
+            <a class="app" id="qwen" href="https://chat.qwen.ai" target="_blank">
+                <img src="./ressources/qwen.png" alt="Qwen" width="36" height="36">
+                <span class="app-title">Qwen</span>
+            </a>
+        </div>
     </div>
     <div id="footer">
-        <p>This webpage is a personal tool of the website's owner (<a href="index.html">froelen</a>). You may find it
-            useful
-            for your needs, but keep in mind it can change greatly or even be deleted without any prior information.</p>
+        <p>
+            This webpage is a personal tool of the website's owner (<a href="index.html">froelen</a>). You may find it
+            useful for your needs, but keep in mind it can change greatly or even be deleted without any prior
+            information.
+        </p>
     </div>
+    <script>
+        document.getElementById('vscode').addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // Try to open VS Code
+            window.location.href = 'vscode://';
+
+            // Optional: if you stay on the same page, you avoid about:blank
+            // Some browsers still show a brief flash or error, but this helps
+        });
+        document.getElementById('discord').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.location.href = 'discord://';
+        });
+    </script>
 </body>
 
 </html>
