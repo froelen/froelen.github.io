@@ -1,44 +1,61 @@
-/* https://coolors.co/191716-00b8a5-9893da-f0f8ff
-   #191716 black
+/* https://coolors.co/111218-00b8a5-9893da-f0f8ff
+   #111218 black
    #f0f8ff white
    #00b8a5 teal
    #9893da purple */
 
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
 
-* {
+body {
+    background: #f0f8ff;
     font-family: "Google Sans Flex";
+    transition: background 0.5s, color 0.5s;
 }
 
-body {
-    background-color: #f0f8ff;
+h1 {
+    background: #00b8a569;
+    border-radius: 18px;
+    margin: 40px 200px;
+    padding: 20px;
+    color: #000;
+    text-align: center;
+    font-size: 3em;
+    transition: background 0.5s, color 0.5s;
 }
 
 #app-list {
     background: #d6ecff;
-    padding: 5px 5px;
     border-radius: 28px;
-    font-size: 0;
+    margin: 0 auto;
+    padding: 5px 5px;
     width: 1040px;
-    margin: 0 auto 0 auto;
+    font-size: 0;
+    transition: background 0.5s, color 0.5s;
+}
+
+#row-1 {
+    margin: 5px 0 10px 0;
+}
+
+#row-2 {
+    margin: 10px 0 5px 0;
 }
 
 .app,
 .app:visited {
-    color: #000;
     background: #ffffff69;
+    border-radius: 18px;
+    margin: 0 5px;
+    padding: 5px 15px;
     height: 50px;
     width: 220px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
     display: inline-flex;
     align-items: center;
-    /* space between icon and text */
-    padding: 5px 15px;
-    text-decoration: none;
-    border-radius: 18px;
-    font-size: 18px;
-    font-weight: 500;
-    transition: background-color 0.2s, color 0.2s;
-    margin: 0 5px;
+    transition: background 0.5s, color 0.5s;
 }
 
 .app:hover {
@@ -55,29 +72,38 @@ body {
     background: #f0f8ff;
 }
 
-#temp {
-    margin: 0 5px;
-}
-
 .app-title {
     margin: 0 auto;
     justify-content: center;
 }
 
-#row-1 {
-    margin: 5px 0 10px 0;
+/* Dark themes */
+.body-dark {
+    background-color: #111218;
 }
 
-#row-2 {
-    margin: 10px 0 5px 0;
+.h1-dark {
+    background: #003d37;
+    color: #fff;
 }
 
-h1 {
-    font-size: 3em;
-    color: #000;
-    background-color: #00b8a569;
-    padding: 20px;
-    border-radius: 18px;
-    margin: 40px 200px;
-    text-align: center;
+/*  #app-list before since IDs have more importance than Classes:
+the ID stylz would otherwise still get applied instead.        */
+#app-list.app-list-dark {
+    background-color: #000B14;
+}
+
+.app-dark,
+.app-dark:visited {
+    background: #17153d;
+    color: #fff;
+}
+
+.app-dark:hover {
+    background: #2f2a7a;
+}
+
+/* Optional: make it feel "pressed" */
+.app-dark:active {
+    background: #111218;
 }

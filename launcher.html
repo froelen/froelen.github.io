@@ -49,6 +49,7 @@
         </div>
     </div>
     <div id="footer">
+        <button id="colorSchemeToggle" onclick="toggleColorScheme()">Toggle color scheme</button>
         <p>
             This webpage is a personal tool of the website's owner (<a href="index.html">froelen</a>). You may find it
             useful for your needs, but keep in mind it can change greatly or even be deleted without any prior
@@ -58,10 +59,8 @@
     <script>
         document.getElementById('vscode').addEventListener('click', function (e) {
             e.preventDefault();
-
             // Try to open VS Code
             window.location.href = 'vscode://';
-
             // Optional: if you stay on the same page, you avoid about:blank
             // Some browsers still show a brief flash or error, but this helps
         });
@@ -69,6 +68,18 @@
             e.preventDefault();
             window.location.href = 'discord://';
         });
+
+        function toggleColorScheme() {
+            var body = document.body;
+            var h1 = document.querySelector('h1');
+            var applist = document.getElementById('app-list');
+            var apps = document.querySelectorAll('.app');
+
+            body.classList.toggle("body-dark");
+            h1.classList.toggle("h1-dark");
+            applist.classList.toggle("app-list-dark");
+            apps.forEach(element => element.classList.toggle("app-dark"));
+        }
     </script>
 </body>
 
