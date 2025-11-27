@@ -111,5 +111,5 @@ the ID stylz would otherwise still get applied instead.        */
 @media (orientation: portrait) {
     #app-list {
         width: 95vw;
-} 
+    }
 }
