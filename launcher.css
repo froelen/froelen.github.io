@@ -28,27 +28,19 @@ h1 {
     border-radius: 28px;
     margin: 0 auto;
     padding: 5px 5px;
-    width: 1040px;
+    width: 50vw;
     font-size: 0;
     transition: background 0.35s, color 0.35s;
-}
-
-#row-1 {
-    margin: 5px 0 10px 0;
-}
-
-#row-2 {
-    margin: 10px 0 5px 0;
 }
 
 .app,
 .app:visited {
     background: #ffffff69;
     border-radius: 18px;
-    margin: 0 5px;
+    margin: 5px;
     padding: 5px 15px;
     height: 50px;
-    width: 220px;
+    width: calc(calc(50vw / 4) - 40px);
     color: #000;
     text-decoration: none;
     font-weight: 500;
@@ -108,16 +100,22 @@ the ID stylz would otherwise still get applied instead.        */
     background: #111218;
 }
 
+@media (max-width: 2000px) {
+    #app-list {
+        width: 75vw;
+    }
+
+    .app {
+        width: calc(calc(75vw / 3) - 40px);
+    }
+}
+
 @media (orientation: portrait) {
     #app-list {
         width: 95vw;
     }
 
     .app {
-    width: calc(90vw / 2 - 27.5px);
-    }
-
-    #google-messages, #discord, #google, #proton-mail {
-    margin-bottom: 10px
+        width: calc(90vw / 2 - 27.5px);
     }
 }
