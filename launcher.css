@@ -9,7 +9,7 @@
 body {
     background: #f0f8ff;
     font-family: "Google Sans Flex";
-    transition: background 0.5s, color 0.5s;
+    transition: background 0.35s, color 0.35s;
 }
 
 h1 {
@@ -20,7 +20,7 @@ h1 {
     color: #000;
     text-align: center;
     font-size: 3em;
-    transition: background 0.5s, color 0.5s;
+    transition: background 0.35s, color 0.35s;
 }
 
 #app-list {
@@ -30,7 +30,7 @@ h1 {
     padding: 5px 5px;
     width: 1040px;
     font-size: 0;
-    transition: background 0.5s, color 0.5s;
+    transition: background 0.35s, color 0.35s;
 }
 
 #row-1 {
@@ -55,7 +55,7 @@ h1 {
     font-size: 18px;
     display: inline-flex;
     align-items: center;
-    transition: background 0.5s, color 0.5s;
+    transition: background 0.35s, color 0.35s;
 }
 
 .app:hover {
