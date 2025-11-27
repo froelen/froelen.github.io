@@ -114,6 +114,6 @@ the ID stylz would otherwise still get applied instead.        */
     }
 
     .app {
-    width: (90vw/2)-10;
+    width: calc(90vw / 2 - 10px);
     }
 }
