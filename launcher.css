@@ -47,7 +47,7 @@ h1 {
     font-size: 18px;
     display: inline-flex;
     align-items: center;
-    transition: background 0.35s, color 0.35s;
+    transition: background-color 0.35s, color 0.35s;
 }
 
 .app:hover {
@@ -110,12 +110,73 @@ the ID stylz would otherwise still get applied instead.        */
     }
 }
 
-@media (orientation: portrait) {
+@media (max-width: 700px) {
     #app-list {
         width: 95vw;
     }
 
-    .app {
-        width: calc(90vw / 2 - 27.5px);
+    .app-icon {
+        width: 0;
+        height: 0;
+    }
+
+    .app,
+    .app:visited {
+        background-color: #ffffff69;
+        background-image: url("./ressources/google.svg");
+        background-position: center;
+        background-size: 20%;
+        background-repeat: no-repeat;
+        background-clip: padding-box;
+        width: calc(calc(95vw / 2) - 40px);
+    }
+
+    .app:hover {
+        background: #fff;
+    }
+
+    .app#google-messages,
+    .app:hover#google-messages {
+        background-image: url("./ressources/google-messages.svg");
+    }
+
+    .app#discord,
+    .app:hover#discord {
+        background-image: url("./ressources/discord.svg");
+    }
+
+    .app#whatsapp,
+    .app:hover#whatsapp {
+        background-image: url("./ressources/whatsapp.svg");
+    }
+
+    .app#hytale,
+    .app:hover#hytale {
+        background-image: url("./ressources/hytale.png");
+    }
+
+    .app#google-settings,
+    .app:hover#google-settings {
+        background-image: url("./ressources/google.svg");
+    }
+
+    .app#proton-mail,
+    .app:hover#proton-mail {
+        background-image: url("./ressources/proton-mail.svg");
+    }
+
+    .app#vscode,
+    .app:hover#vscode {
+        background-image: url("./ressources/vscode.svg");
+    }
+
+    .app#qwen,
+    .app:hover#qwen {
+        background-image: url("./ressources/qwen.png");
+    }
+
+    .app#portfolio,
+    .app:hover#portfolio {
+        background-image: url("./ressources/portfolio.svg");
     }
 }
