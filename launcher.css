@@ -107,3 +107,9 @@ the ID stylz would otherwise still get applied instead.        */
 .app-dark:active {
     background: #111218;
 }
+
+@media (orientation: portrait) {
+#app-list {
+    width: 1000px;
+}
+}
