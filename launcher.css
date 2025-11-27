@@ -116,4 +116,8 @@ the ID stylz would otherwise still get applied instead.        */
     .app {
     width: calc(90vw / 2 - 27.5px);
     }
+
+    #google-messages, #discord, #google, #proton-mail {
+    margin-bottom: 10px
+    }
 }
