@@ -153,7 +153,7 @@ the ID stylz would otherwise still get applied instead.        */
 
         /* Shared Background Settings */
         background-position: center;
-        background-size: 0;
+        background-size: 20%;
         background-repeat: no-repeat;
         transition: background 0.35s;
 
