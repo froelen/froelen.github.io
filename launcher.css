@@ -100,7 +100,7 @@ the ID stylz would otherwise still get applied instead.        */
     background: #111218;
 }
 
-@media (max-width: 2000px) {
+@media (max-width: 1850px) {
     #app-list {
         width: 75vw;
     }
@@ -110,7 +110,7 @@ the ID stylz would otherwise still get applied instead.        */
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
     #app-list {
         width: 95vw;
     }
