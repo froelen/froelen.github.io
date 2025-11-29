@@ -100,6 +100,51 @@ the ID stylz would otherwise still get applied instead.        */
     background: #111218;
 }
 
+#footer {
+    background: #d6ecff;
+    border-radius: 28px;
+    margin: 10px auto;
+    padding: 5px;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    transition: background 0.35s, color 0.35s;
+}
+
+#colorSchemeToggle {
+    background: #d6ecff69;
+    border: 1px solid #00b8a5;
+    border-radius: 18px;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    color: #000;
+    transition: background-color 0.2s, color 0.2s;
+    font-size: 14px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#colorSchemeToggle:hover {
+    background: #fff;
+}
+
+p {
+    margin: 5px;
+    padding: 10px;
+    font-size: 14px;
+    flex: 1;
+    overflow-wrap: break-word;
+}
+
+.footer-dark {
+    p {
+        color: #fff;
+    }
+}
+
 @media (max-width: 1850px) {
     #app-list {
         width: 75vw;
@@ -153,12 +198,12 @@ the ID stylz would otherwise still get applied instead.        */
 
         /* Shared Background Settings */
         background-position: center;
-        background-size: 20%;
+        background-size: 10%;
         background-repeat: no-repeat;
         transition: background 0.35s;
 
         /* Default Image */
-        background-image: url("./ressources/google.svg");
+        background-image: url("./ressources/missing.svg");
     }
 
     .app:hover {
@@ -203,7 +248,7 @@ the ID stylz would otherwise still get applied instead.        */
         background-image: url("./ressources/qwen.png");
     }
 
-    .app#portfolio::before {
+    /*.app#portfolio::before {
         background-image: url("./ressources/portfolio.svg");
-    }
+    }*/
 }
