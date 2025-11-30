@@ -62,6 +62,7 @@
             const body = document.body;
             const h1 = document.querySelector('h1');
             const appList = document.getElementById('app-list');
+            var apps = document.querySelectorAll('.app');
             const footer = document.getElementById('footer');
 
             // Check saved preference
@@ -69,10 +70,11 @@
 
             // Apply saved theme
             if (savedTheme === 'dark') {
-                body.classList.add('body-dark');
-                h1.classList.add('h1-dark');
-                appList.classList.add('app-list-dark');
-                footer.classList.add('footer-dark');
+                body.classList.toggle('body-dark');
+                h1.classList.toggle('h1-dark');
+                appList.classList.toggle('app-list-dark');
+                apps.forEach(element => element.classList.toggle("app-dark"));
+                footer.classList.toggle('footer-dark');
             }
 
             // Toggle theme on button click
@@ -84,6 +86,7 @@
                     body.classList.remove('body-dark');
                     h1.classList.remove('h1-dark');
                     appList.classList.remove('app-list-dark');
+                    apps.forEach(element => element.classList.remove("app-dark"));
                     footer.classList.remove('footer-dark');
                     localStorage.setItem('color-scheme', 'light');
                 } else {
@@ -91,6 +94,7 @@
                     body.classList.add('body-dark');
                     h1.classList.add('h1-dark');
                     appList.classList.add('app-list-dark');
+                    apps.forEach(element => element.classList.add("app-dark"));
                     footer.classList.add('footer-dark');
                     localStorage.setItem('color-scheme', 'dark');
                 }
