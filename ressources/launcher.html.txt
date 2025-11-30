@@ -56,46 +56,31 @@
         </p>
     </div>
     <script>
-        // On page load
-        document.addEventListener('DOMContentLoaded', () => {
-            const toggleButton = document.getElementById('colorSchemeToggle');
-            const body = document.body;
-            const h1 = document.querySelector('h1');
-            const appList = document.getElementById('app-list');
-            const footer = document.getElementById('footer');
-
-            // Check saved preference
-            const savedTheme = localStorage.getItem('color-scheme') || 'light';
-
-            // Apply saved theme
-            if (savedTheme === 'dark') {
-                body.classList.add('body-dark');
-                h1.classList.add('h1-dark');
-                appList.classList.add('app-list-dark');
-                footer.classList.add('footer-dark');
-            }
-
-            // Toggle theme on button click
-            toggleButton.addEventListener('click', () => {
-                const isDark = body.classList.contains('body-dark');
-
-                if (isDark) {
-                    // Switch to light
-                    body.classList.remove('body-dark');
-                    h1.classList.remove('h1-dark');
-                    appList.classList.remove('app-list-dark');
-                    footer.classList.remove('footer-dark');
-                    localStorage.setItem('color-scheme', 'light');
-                } else {
-                    // Switch to dark
-                    body.classList.add('body-dark');
-                    h1.classList.add('h1-dark');
-                    appList.classList.add('app-list-dark');
-                    footer.classList.add('footer-dark');
-                    localStorage.setItem('color-scheme', 'dark');
-                }
-            });
+        document.getElementById('vscode').addEventListener('click', function (e) {
+            e.preventDefault();
+            // Try to open VS Code
+            window.location.href = 'vscode://';
+            // Optional: if you stay on the same page, you avoid about:blank
+            // Some browsers still show a brief flash or error, but this helps
         });
+        document.getElementById('discord').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.location.href = 'discord://';
+        });
+
+        function toggleColorScheme() {
+            var body = document.body;
+            var h1 = document.querySelector('h1');
+            var applist = document.getElementById('app-list');
+            var apps = document.querySelectorAll('.app');
+            var footer = document.getElementById('footer');
+
+            body.classList.toggle("body-dark");
+            h1.classList.toggle("h1-dark");
+            applist.classList.toggle("app-list-dark");
+            apps.forEach(element => element.classList.toggle("app-dark"));
+            footer.classList.toggle("footer-dark");
+        }
     </script>
 </body>
 
