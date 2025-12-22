@@ -1,0 +1,156 @@
+/*  COLOR PALETTE
+    #f6a6fc light pink
+    #9ff7fb blue
+    #ca47a4 pink
+    #352f77 purple
+    #000212 black
+    #f7f8ff white
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    background: #f7f8ff;
+    font-family: "Fira Sans";
+}
+
+h1 {
+    display: none;
+}
+
+#main-content {
+    margin: 5em auto !important;
+    width: 75vw;
+    gap: 5vw;
+    display: flex;
+    --panel-padding: 10px;
+    --grid-gap: 10px;
+    --column-count: 4;
+    --left-panel-width: 26vw;
+    --right-panel-width: 44vw;
+    --column-width: calc((var(--right-panel-width) - (var(--panel-padding) * 2) - (var(--grid-gap) * (var(--column-count) - 1))) / var(--column-count));
+
+    /* This is the core 'look' of your tiles */
+    --tile-radius: calc(var(--column-width) / 3.5);
+
+    /* This is the math for the outer container to match the inner tiles */
+    --outer-radius: calc(var(--tile-radius) + var(--panel-padding));
+}
+
+#left-panel {
+    width: var(--left-panel-width);
+    outline: 3px solid #f6a6fc;
+    padding: var(--panel-padding);
+    border-radius: var(--outer-radius);
+    /* Now matches! */
+}
+
+#left-panel-top {
+    display: flex;
+    gap: 10px
+}
+
+#profile {
+    border-radius: var(--tile-radius);
+    display: flex;
+    border: 2px dashed #00021250;
+    user-select: none;
+}
+
+#name {
+    display: flex;
+    font-size: 44px;
+    margin: 65px auto auto;
+}
+
+#about {
+    font-size: 24px;
+    padding: 0.75vw;
+    margin: 0;
+    text-align: justify;
+}
+
+#right-panel {
+    outline: 3px solid #f6a6fc;
+    width: var(--right-panel-width);
+    display: grid;
+    grid-template-columns: repeat(var(--column-count), var(--column-width));
+    grid-template-rows: repeat(4, var(--column-width));
+    /* Use 1fr for cleaner layout */
+    grid-auto-flow: dense;
+    gap: var(--grid-gap);
+    padding: var(--panel-padding);
+    box-sizing: border-box;
+    border-radius: var(--outer-radius);
+    /* Now matches! */
+}
+
+[class^="tile-"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: gray;
+    border-radius: calc(var(--column-width) / 3.5);
+    font-size: 16px;
+}
+
+.tile-1x1 {
+    aspect-ratio: 1 / 1;
+}
+
+.tile-1x2 {
+    grid-row: span 2;
+}
+
+.tile-2x1 {
+    grid-column: span 2;
+}
+
+.tile-2x2 {
+    grid-column: span 2;
+    grid-row: span 2;
+    aspect-ratio: 1 / 1;
+}
+
+.tile-2x4 {
+    width: 300px;
+    height: 600px;
+    background: gainsboro;
+    display: block;
+}
+
+.tile-4x2 {
+    width: 600px;
+    height: 300px;
+    background: gray;
+    display: block;
+}
+
+.tile-4x4 {
+    width: 600px;
+    height: 600px;
+    background: gainsboro;
+    display: block;
+}
+
+.tile-icon {
+    background: #fff;
+    width: 75%;
+    border-radius: 10px;
+}
+
+#github {
+    border: 2px solid #1b1f24;
+    background: #fff;
+
+    .tile-icon {
+        width: 80%;
+    }
+
+}
+
+#mailto {
+    background: #fff;
+    border: 2px solid #6d4aff;
+}
