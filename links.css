@@ -22,23 +22,26 @@ h1 {
 #main-content {
     margin: 5em auto !important;
     width: 75vw;
-    gap: 5vw;
     display: flex;
-    --panel-padding: 10px;
-    --grid-gap: 10px;
-    --column-count: 4;
+    gap: 5vw;
+
     --left-panel-width: 26vw;
     --right-panel-width: 44vw;
+    --panel-padding: 10px;
+
+    --grid-gap: 10px;
+    --column-count: 4;
     --column-width: calc((var(--right-panel-width) - (var(--panel-padding) * 2) - (var(--grid-gap) * (var(--column-count) - 1))) / var(--column-count));
+
     --tile-radius: calc(var(--column-width) / 3.5);
     --outer-radius: calc(var(--tile-radius) + var(--panel-padding));
 }
 
 #left-panel {
-    width: var(--left-panel-width);
     outline: 3px solid #f6a6fc;
-    padding: var(--panel-padding);
     border-radius: var(--outer-radius);
+    padding: var(--panel-padding);
+    width: var(--left-panel-width);
 }
 
 #left-panel-top {
@@ -47,45 +50,45 @@ h1 {
 }
 
 #profile {
-    border-radius: var(--tile-radius);
     border: 2px dashed #00021250;
+    border-radius: var(--tile-radius);
     user-select: none;
 }
 
 #name {
+    margin: 65px auto auto;
     display: flex;
     font-size: 44px;
-    margin: 65px auto auto;
 }
 
 #about {
-    font-size: 24px;
-    padding: 0.75vw;
     margin: 0;
+    padding: 0.75vw;
+    font-size: 24px;
     text-align: justify;
 }
 
 #right-panel {
     outline: 3px solid #f6a6fc;
+    border-radius: var(--outer-radius);
+    padding: var(--panel-padding);
     width: var(--right-panel-width);
+
     display: grid;
     grid-template-columns: repeat(var(--column-count), var(--column-width));
     grid-template-rows: repeat(4, var(--column-width));
     grid-auto-flow: dense;
     gap: var(--grid-gap);
-    padding: var(--panel-padding);
-    box-sizing: border-box;
-    border-radius: var(--outer-radius);
 }
 
 [class^="tile-"] {
+    border: 2px solid #000;
+    border-radius: var(--tile-radius);
     display: flex;
     align-items: center;
     justify-content: center;
     background: #fff;
-    border-radius: var(--tile-radius);
     font-size: 16px;
-    border: 2px solid #000;
 }
 
 .tile-1x1 {
@@ -112,10 +115,10 @@ h1 {
 }
 
 .tile-icon {
-    background: #fff;
-    width: 75%;
-    border-radius: 10px;
     border: 0;
+    border-radius: 10px;
+    width: 75%;
+    background: #fff;
 }
 
 #github {
@@ -129,22 +132,22 @@ h1 {
 }
 
 #mailto {
-    background: #fff;
     border: 2px solid #6d4aff;
     overflow: hidden;
+    background: #fff;
 }
 
 #support {
+    padding: 0;
     overflow: hidden;
     width: 403.375px;
     display: flex;
     justify-content: flex-start;
-    padding: 0;
 }
 
 #kofi {
-    flex-shrink: 0;
+    border: none;
     width: 417.5px !important;
     height: 100%;
-    border: none;
+    flex-shrink: 0;
 }
