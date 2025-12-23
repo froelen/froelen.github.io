@@ -30,11 +30,7 @@ h1 {
     --left-panel-width: 26vw;
     --right-panel-width: 44vw;
     --column-width: calc((var(--right-panel-width) - (var(--panel-padding) * 2) - (var(--grid-gap) * (var(--column-count) - 1))) / var(--column-count));
-
-    /* This is the core 'look' of your tiles */
     --tile-radius: calc(var(--column-width) / 3.5);
-
-    /* This is the math for the outer container to match the inner tiles */
     --outer-radius: calc(var(--tile-radius) + var(--panel-padding));
 }
 
@@ -43,7 +39,6 @@ h1 {
     outline: 3px solid #f6a6fc;
     padding: var(--panel-padding);
     border-radius: var(--outer-radius);
-    /* Now matches! */
 }
 
 #left-panel-top {
@@ -53,7 +48,6 @@ h1 {
 
 #profile {
     border-radius: var(--tile-radius);
-    display: flex;
     border: 2px dashed #00021250;
     user-select: none;
 }
@@ -77,22 +71,21 @@ h1 {
     display: grid;
     grid-template-columns: repeat(var(--column-count), var(--column-width));
     grid-template-rows: repeat(4, var(--column-width));
-    /* Use 1fr for cleaner layout */
     grid-auto-flow: dense;
     gap: var(--grid-gap);
     padding: var(--panel-padding);
     box-sizing: border-box;
     border-radius: var(--outer-radius);
-    /* Now matches! */
 }
 
 [class^="tile-"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: gray;
-    border-radius: calc(var(--column-width) / 3.5);
+    background: #fff;
+    border-radius: var(--tile-radius);
     font-size: 16px;
+    border: 2px solid #000;
 }
 
 .tile-1x1 {
@@ -113,31 +106,16 @@ h1 {
     aspect-ratio: 1 / 1;
 }
 
-.tile-2x4 {
-    width: 300px;
-    height: 600px;
-    background: gainsboro;
-    display: block;
-}
-
-.tile-4x2 {
-    width: 600px;
-    height: 300px;
-    background: gray;
-    display: block;
-}
-
-.tile-4x4 {
-    width: 600px;
-    height: 600px;
-    background: gainsboro;
-    display: block;
+.tile-2x3 {
+    grid-column: span 2;
+    grid-row: span 3;
 }
 
 .tile-icon {
     background: #fff;
     width: 75%;
     border-radius: 10px;
+    border: 0;
 }
 
 #github {
@@ -153,4 +131,20 @@ h1 {
 #mailto {
     background: #fff;
     border: 2px solid #6d4aff;
+    overflow: hidden;
+}
+
+#support {
+    overflow: hidden;
+    width: 403.375px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+#kofi {
+    flex-shrink: 0;
+    width: 417.5px !important;
+    height: 100%;
+    border: none;
 }
