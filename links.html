@@ -16,6 +16,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="links.css">
   <title>froelen ・ links</title>
+  <script src="scripts.js"></script>
 </head>
 
 <body>
@@ -54,6 +55,19 @@
         href="https://web.archive.org/web/20181129034243/https://helmip.tumblr.com/image/160023199121" target="_blank">archive</a>).
     </p>
   </div>
+  <script>
+    var engine = getEngine();
+    var body = document.body;
+    if (engine === 'Gecko') {
+      body.classList.add('gecko')
+    }
+    else if (engine === 'WebKit') {
+      body.classList.add('webkit')
+    }
+    else {
+      body.classList.add('blink');
+    }
+  </script>
 </body>
 
 </html>
