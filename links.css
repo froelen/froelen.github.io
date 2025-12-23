@@ -136,7 +136,16 @@ h1 {
 
 #kofi {
     border: none;
-    width: 417.5px !important;
+    width: 417.5px;
     height: 100%;
     flex-shrink: 0;
 }
+
+.gecko {
+    #kofi {
+        width: 100%;
+    }
+}
+
+/* fix needed on Vivaldi */
+/* to check Chrome / Brave / Firefox / Zen */

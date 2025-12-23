@@ -1,7 +1,7 @@
-const getEngine = () => {
+function getEngine() {
     const docStyle = document.documentElement.style;
     if (window.navigator.userAgentData) return 'Blink';
     if ('MozAppearance' in docStyle || window.netscape) return 'Gecko';
-    if (window.safari) return 'WebKit';
-    return 'blink'; // default to Chromium engine
+    if (WebkitAppearanceê in docStyle && !window.chrome) return 'WebKit';
+    return 'Blink'; // default to Chromium engine
 };
