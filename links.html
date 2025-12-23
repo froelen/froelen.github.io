@@ -56,17 +56,7 @@
     </p>
   </div>
   <script>
-    var engine = getEngine();
-    var body = document.body;
-    if (engine === 'Gecko') {
-      body.classList.add('gecko')
-    }
-    else if (engine === 'WebKit') {
-      body.classList.add('webkit')
-    }
-    else {
-      body.classList.add('blink');
-    }
+    document.body.classList.add(getEngine().toLowerCase());
   </script>
 </body>
 
