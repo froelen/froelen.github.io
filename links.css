@@ -61,6 +61,22 @@ h1 {
     text-align: justify;
 }
 
+@media (prefers-color-scheme: dark) {
+    body {
+        background: url("ressources/links-background-dark.svg");
+        color: #f7f8ff;
+    }
+
+    #profile {
+        border-color: #f7f8ff;
+    }
+}
+
+
+
+
+
+
 @media screen and (min-width: 1900px) {
     body {
         --background-image: url("ressources/links-background.png");
