@@ -7,14 +7,32 @@
     #f7f8ff white
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+/*font: 400 1rem "Fira Sans"; sans-serif;
+  for bodies of text*/
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*font: 750 2.5rem "Lexend", serif;
+  for titles*/
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+/*font: "Onest";
+  for interactives elements (e.g. buttons)*/
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
 
 body {
-    background: url("ressources/links-background.svg");
+    /*background: url("ressources/links-background.svg");*/
     /*background-size: cover;*/
-    font: 400 1rem "Fira Sans", sans-serif
+    --radius-factor: 1;
+    --sharp: 0px;
+    --medium: calc(8px * var(--radius-factor));
+    --soft: calc(100px * var(--radius-factor));
+    --radius: var(--sharp);
+    /* change --radius-factor and --radius for easy design switch */
+
+    margin: 0;
+    padding: 0;
+    background: #f7f8ff;
+    font: 400 1rem "Fira Sans", sans-serif;
+    color: #000212;
 }
 
 h1 {
@@ -22,11 +40,11 @@ h1 {
 }
 
 #main-content {
-    margin: 2.5% auto;
-    width: 95%;
+    --content-margins: 1em;
+    margin: var(--content-margins);
 }
 
-#left-panel {
+#top-panel {
     box-shadow: 0 3px 0 #f6a6fc inset, 0 -3px 0 #f6a6fc inset;
     padding: 5px 0;
     /*font-family: "Fira Sans";
@@ -34,7 +52,7 @@ h1 {
     font-size: 1rem;*/
 }
 
-#left-panel-top {
+#top-title {
     margin: 5px 0;
     display: flex;
     gap: 0;
@@ -46,29 +64,58 @@ h1 {
 #profile {
     border: 2px dashed #00021250;
     border-right: none;
-    border-radius: 100px;
+    border-radius: calc(16px + var(--radius));
     user-select: none;
 }
 
 #name {
     margin: 0;
     margin-left: -30px;
-    font: 750 2.5rem "Lexend", serif
+    font: 750 2.5rem "Lexend", serif;
 }
 
-#about {
+#top-about {
     margin: 0.5em 0;
     text-align: justify;
 }
 
+.tile {
+    --tile-padding-vertical: 5px;
+    --tile-padding-horizontal: 10px;
+    --tile-width: calc(100vw - calc(calc(2*var(--tile-padding-horizontal)) + calc(2*var(--content-margins))));
+    margin: 10px 0;
+    padding: var(--tile-padding-vertical) var(--tile-padding-horizontal);
+    width: var(--tile-width);
+    outline: 2px solid #6d4aff;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.icon {
+    height: calc(1em + calc(2*var(--tile-padding-vertical)));
+}
+
+#footer {
+    margin: 10px;
+}
+
+
 @media (prefers-color-scheme: dark) {
     body {
-        background: url("ressources/links-background-dark.svg");
+        /*background: url("ressources/links-background-dark.svg");*/
+        background: #000212;
         color: #f7f8ff;
     }
 
     #profile {
         border-color: #f7f8ff;
+    }
+
+    #github-icon {
+        content: url("./ressources/github-dark.svg");
     }
 }
 
