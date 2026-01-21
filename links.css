@@ -17,259 +17,254 @@
   for interactives elements (e.g. buttons)*/
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 
-
+/*
+tasks : make an oled mode (replace #000212 with #000 and force dark theme)
+        finish design lol
+        finish page also
+*/
 body {
-    /*background: url("ressources/links-background.svg");*/
-    /*background-size: cover;*/
-    --radius-factor: 1;
-    --sharp: 0px;
-    --medium: calc(8px * var(--radius-factor));
-    --soft: calc(100px * var(--radius-factor));
-    --radius: var(--sharp);
-    /* change --radius-factor and --radius for easy design switch */
+  /*background: url("ressources/links-background.svg");*/
+  /*background-size: cover;*/
+  --radius-factor: 1;
+  --sharp: 0px;
+  --medium: calc(8px * var(--radius-factor));
+  --soft: calc(100px * var(--radius-factor));
+  --radius: var(--sharp);
+  /* change --radius-factor and --radius for easy design switch */
 
-    margin: 0;
-    padding: 0;
-    background: #f7f8ff;
-    font: 400 1rem "Fira Sans", sans-serif;
-    color: #000212;
+  margin: 0;
+  padding: 0;
+  /*background: #f7f8ff;*/
+  font: 400 1rem "Fira Sans", sans-serif;
+  color: #000212;
 }
 
 h1 {
-    display: none;
+  display: none;
 }
 
 #main-content {
-    --content-margins: 1em;
-    margin: var(--content-margins);
+  --content-margins: 1em;
+  margin: var(--content-margins);
 }
 
 #top-panel {
-    box-shadow: 0 3px 0 #f6a6fc inset, 0 -3px 0 #f6a6fc inset;
-    padding: 5px 0;
-    /*font-family: "Fira Sans";
+  box-shadow: 0 3px 0 #f6a6fc inset, 0 -3px 0 #f6a6fc inset;
+  padding: 5px 0;
+  /*font-family: "Fira Sans";
     font-weight: 400;
     font-size: 1rem;*/
 }
 
 #top-title {
-    margin: 5px 0;
-    display: flex;
-    gap: 0;
-    /* Remove the gap between the image and text */
-    align-items: center;
-    /* Vertically center the text */
+  margin: 5px 0;
+  display: flex;
+  /* Remove the gap between the image and text */
+  align-items: center;
+  /* Vertically center the text */
+  /*gap: calc(calc(100vw - calc(2*var(--content-margins))) - calc(150px + 144.250px));*/
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: nowrap;
 }
 
 #profile {
-    border: 2px dashed #00021250;
-    border-right: none;
-    border-radius: calc(16px + var(--radius));
-    user-select: none;
+  border: 2px dashed #00021250;
+  border-radius: var(--radius);
+  user-select: none;
+  margin-right: -50px;
 }
 
 #name {
-    margin: 0;
-    margin-left: -30px;
-    font: 750 2.5rem "Lexend", serif;
+  font: 750 2.5rem "Lexend", serif;
 }
 
 #top-about {
-    margin: 0.5em 0;
-    text-align: justify;
+  margin: 0.5em 0;
+  text-align: justify;
 }
 
 .tile {
-    --tile-padding-vertical: 5px;
-    --tile-padding-horizontal: 10px;
-    --tile-width: calc(100vw - calc(calc(2*var(--tile-padding-horizontal)) + calc(2*var(--content-margins))));
-    margin: 10px 0;
-    padding: var(--tile-padding-vertical) var(--tile-padding-horizontal);
-    width: var(--tile-width);
-    outline: 2px solid #6d4aff;
-    border-radius: var(--radius);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+  --tile-padding-vertical: 5px;
+  --tile-padding-horizontal: 10px;
+  --tile-width: calc(100vw - calc(calc(2*var(--tile-padding-horizontal)) + calc(2*var(--content-margins))));
+  margin: 10px 0;
+  padding: var(--tile-padding-vertical) var(--tile-padding-horizontal);
+  width: var(--tile-width);
+  outline: 2px solid #f6a6fc;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  font: 500 1.1rem "Onest", serif;
 }
 
 .icon {
-    height: calc(1em + calc(2*var(--tile-padding-vertical)));
+  height: calc(1em + calc(2*var(--tile-padding-vertical)));
 }
 
 #footer {
-    margin: 10px;
+  margin: 10px;
 }
-
 
 @media (prefers-color-scheme: dark) {
-    body {
-        /*background: url("ressources/links-background-dark.svg");*/
-        background: #000212;
-        color: #f7f8ff;
-    }
+  body {
+    /*background: url("ressources/links-background-dark.svg");*/
+    background: #000212;
+    color: #f7f8ff;
+  }
 
-    #profile {
-        border-color: #f7f8ff;
-    }
+  #profile {
+    border-color: #f7f8ff;
+  }
 
-    #github-icon {
-        content: url("./ressources/github-dark.svg");
-    }
+  #github-icon {
+    content: url("./ressources/github-dark.svg");
+  }
 }
 
 
 
+@media invalid and (layout: old) {
+  body {
+    background: #f7f8ff;
+    font-family: "Fira Sans";
+  }
 
+  h1 {
+    display: none;
+  }
 
+  #main-content {
+    margin: 5em auto !important;
+    width: 75vw;
+    display: flex;
+    gap: 5vw;
 
-@media screen and (min-width: 1900px) {
-    body {
-        --background-image: url("ressources/links-background.png");
-        background: #f7f8ff;
-        background: var(--background-image);
-        font-family: "Fira Sans";
-    }
+    --left-panel-width: 26vw;
+    --right-panel-width: 44vw;
+    --panel-padding: 10px;
 
-    h1 {
-        display: none;
-    }
+    --grid-gap: 10px;
+    --column-count: 4;
+    --column-width: calc((var(--right-panel-width) - (var(--panel-padding) * 2) - (var(--grid-gap) * (var(--column-count) - 1))) / var(--column-count));
 
-    #main-content {
-        margin: 5em auto !important;
-        width: 75vw;
-        display: flex;
-        gap: 5vw;
+    --tile-radius: calc(var(--column-width) / 3.5);
+    --outer-radius: calc(var(--tile-radius) + var(--panel-padding));
+  }
 
-        --left-panel-width: 26vw;
-        --right-panel-width: 44vw;
-        --panel-padding: 10px;
+  #left-panel {
+    outline: 3px solid #f6a6fc;
+    border-radius: var(--outer-radius);
+    padding: var(--panel-padding);
+    width: var(--left-panel-width);
+  }
 
-        --grid-gap: 10px;
-        --column-count: 4;
-        --column-width: calc((var(--right-panel-width) - (var(--panel-padding) * 2) - (var(--grid-gap) * (var(--column-count) - 1))) / var(--column-count));
+  #left-panel-top {
+    display: flex;
+    gap: 10px
+  }
 
-        --tile-radius: calc(var(--column-width) / 3.5);
-        --outer-radius: calc(var(--tile-radius) + var(--panel-padding));
-    }
+  #profile {
+    border: 2px dashed #00021250;
+    border-radius: var(--tile-radius);
+    user-select: none;
+  }
 
-    #left-panel {
-        outline: 3px solid #f6a6fc;
-        border-radius: var(--outer-radius);
-        padding: var(--panel-padding);
-        width: var(--left-panel-width);
-    }
+  #name {
+    margin: 65px auto auto;
+    display: flex;
+    font-size: 44px;
+  }
 
-    #left-panel-top {
-        display: flex;
-        gap: 10px
-    }
+  #about {
+    margin: 0;
+    padding: 0.75vw;
+    font-size: 24px;
+    text-align: justify;
+  }
 
-    #profile {
-        border: 2px dashed #00021250;
-        border-radius: var(--tile-radius);
-        user-select: none;
-    }
+  #right-panel {
+    outline: 3px solid #f6a6fc;
+    border-radius: var(--outer-radius);
+    padding: var(--panel-padding);
+    width: var(--right-panel-width);
 
-    #name {
-        margin: 65px auto auto;
-        display: flex;
-        font-size: 44px;
-    }
+    display: grid;
+    grid-template-columns: repeat(var(--column-count), var(--column-width));
+    grid-template-rows: repeat(4, var(--column-width));
+    grid-auto-flow: dense;
+    gap: var(--grid-gap);
+  }
 
-    #about {
-        margin: 0;
-        padding: 0.75vw;
-        font-size: 24px;
-        text-align: justify;
-    }
+  [class^="tile-"] {
+    border: 2px solid #000;
+    border-radius: var(--tile-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+  }
 
-    #right-panel {
-        outline: 3px solid #f6a6fc;
-        border-radius: var(--outer-radius);
-        padding: var(--panel-padding);
-        width: var(--right-panel-width);
+  .tile-1x2 {
+    grid-row: span 2;
+  }
 
-        display: grid;
-        grid-template-columns: repeat(var(--column-count), var(--column-width));
-        grid-template-rows: repeat(4, var(--column-width));
-        grid-auto-flow: dense;
-        gap: var(--grid-gap);
-    }
+  .tile-2x1 {
+    grid-column: span 2;
+  }
 
-    [class^="tile-"] {
-        border: 2px solid #000;
-        border-radius: var(--tile-radius);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #fff;
-    }
+  .tile-2x2 {
+    grid-column: span 2;
+    grid-row: span 2;
+    aspect-ratio: 1 / 1;
+  }
 
-    .tile-1x2 {
-        grid-row: span 2;
-    }
+  .tile-2x3 {
+    grid-column: span 2;
+    grid-row: span 3;
+  }
 
-    .tile-2x1 {
-        grid-column: span 2;
-    }
+  .tile-icon {
+    border: 0;
+    border-radius: 10px;
+    width: 75%;
+  }
 
-    .tile-2x2 {
-        grid-column: span 2;
-        grid-row: span 2;
-        aspect-ratio: 1 / 1;
-    }
-
-    .tile-2x3 {
-        grid-column: span 2;
-        grid-row: span 3;
-    }
+  #github {
+    border: 2px solid #1b1f24;
 
     .tile-icon {
-        border: 0;
-        border-radius: 10px;
-        width: 75%;
+      width: 80%;
     }
 
-    #github {
-        border: 2px solid #1b1f24;
+  }
 
-        .tile-icon {
-            width: 80%;
-        }
+  #mailto {
+    border: 2px solid #6d4aff;
+  }
 
-    }
+  #support {
+    padding: 0;
+    overflow: hidden;
+    justify-content: flex-start;
+  }
 
-    #mailto {
-        border: 2px solid #6d4aff;
-    }
+  #kofi {
+    border: none;
+    width: 417.5px;
+    height: 100%;
+    flex-shrink: 0;
+  }
 
-    #support {
-        padding: 0;
-        overflow: hidden;
-        justify-content: flex-start;
-    }
-
+  .gecko {
     #kofi {
-        border: none;
-        width: 417.5px;
-        height: 100%;
-        flex-shrink: 0;
+      width: 100%;
     }
-
-    .gecko {
-        #kofi {
-            width: 100%;
-        }
-    }
+  }
 }
 
 /* fix needed on Vivaldi */
 /* to check Chrome / Brave / Firefox / Zen */
-
-@media screen and (min-width: 2000px) {
-    #body {
-        background: red;
-    }
-}
