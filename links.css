@@ -23,8 +23,9 @@ tasks : make an oled mode (replace #000212 with #000 and force dark theme)
         finish page also
 */
 body {
-  /*background: url("ressources/links-background.svg");*/
-  /*background-size: cover;*/
+  background: url("ressources/links-background.svg");
+  background-size: cover;
+  /*background: #f7f8ff;*/
   --radius-factor: 1;
   --sharp: 0px;
   --medium: calc(8px * var(--radius-factor));
@@ -34,7 +35,6 @@ body {
 
   margin: 0;
   padding: 0;
-  /*background: #f7f8ff;*/
   font: 400 1rem "Fira Sans", sans-serif;
   color: #000212;
 }
@@ -84,6 +84,10 @@ h1 {
   text-align: justify;
 }
 
+#bottom-panel {
+  justify-items: center;
+}
+
 .tile {
   --tile-padding-vertical: 5px;
   --tile-padding-horizontal: 10px;
@@ -99,6 +103,7 @@ h1 {
   gap: 10px;
   text-decoration: none;
   font: 500 1.1rem "Onest", serif;
+  max-width: 300px;
 }
 
 .icon {
@@ -122,6 +127,18 @@ h1 {
 
   #github-icon {
     content: url("./ressources/github-dark.svg");
+  }
+}
+
+@media screen and (min-width: 660px) {
+  body {
+    background: red;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    background: blue;
   }
 }
 
