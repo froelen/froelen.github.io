@@ -57,7 +57,7 @@ h1 {
 }
 
 #top-title {
-  margin: 5px 0;
+  margin: 1.5em 0 1em;
   display: flex;
   /* Remove the gap between the image and text */
   align-items: center;
@@ -80,19 +80,21 @@ h1 {
 }
 
 #top-about {
-  margin: 0.5em 0;
+  margin: 1em 0 1.5em;
   text-align: justify;
 }
 
 #bottom-panel {
   justify-items: center;
+  margin: 1.5em 0;
+  padding: 0 0 10vh 0;
 }
 
 .tile {
   --tile-padding-vertical: 5px;
   --tile-padding-horizontal: 10px;
   --tile-width: calc(100vw - calc(calc(2*var(--tile-padding-horizontal)) + calc(2*var(--content-margins))));
-  margin: 10px 0;
+  margin: 20px 0;
   padding: var(--tile-padding-vertical) var(--tile-padding-horizontal);
   width: var(--tile-width);
   outline: 2px solid #f6a6fc;
