@@ -171,13 +171,13 @@ h1 {
   width: 35px;
 
 
-  #colorThemeToggle,
-  #oledThemeToggle {
+  #schemeToggle,
+  #oledToggle {
     display: none;
   }
 
 
-  #closeNavbarToggle {
+  #navbarToggle {
     width: 24px;
   }
 }
