@@ -28,7 +28,7 @@
         <h2 id="name">froelen</h2>
       </div>
       <p id="top-about">
-        Yesterday is history, tomorrow is a mystery, today is a gift, which is why it is called present.
+        Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present.
       </p>
     </div>
     <div id="bottom-panel" class="panel">
@@ -80,8 +80,50 @@
       Credits to HemiP, Mozilla FireFox, and PrimeTek: <a href="credits.html">see here</a>.
     </p>
   </div>
+  <nav id="bottom-nav">
+    <button id="themeToggle" class="navbar-button">☼</button>
+    <button id="oledToggle" class="navbar-button">OLED</button>
+    <button id="navbarToggle" class="navbar-button">X</button>
+  </nav>
   <script>
-    document.body.classList.add(getEngine().toLowerCase());
+    const body = document.body
+    body.classList.add(getEngine().toLowerCase());
+
+    // gets the prefered colored theme
+    const isDarkPrefered = window.matchMedia('(prefers-color-scheme: dark)');
+    if (isDarkPrefered) { body.classList.add('dark') }
+    // handles changes of isDarkPrefered (switches theme if different, stays the same if themes match)
+    function handleThemeChange(event) {
+      if (event.matches) {
+        if (body.classList.contains('dark')) { body.classList.remove('dark'); }
+        else { body.classList.add('dark') }
+      }
+    }
+
+    // starts monitoring for isDarkPrefered changes and launches related function
+    isDarkPrefered.addEventListener('change', handleThemeChange);
+
+    const themeToggle = document.getElementById("themeToggle");
+    themeToggle.addEventListener('click', () => {
+      if (body.classList.contains('dark')) { body.classList.remove('dark') }
+      else { body.classList.add('dark') }
+    })
+
+    var toggleButton = document.getElementById("oledToggle");
+    toggleButton.addEventListener('click', () => {
+      const isOLED = body.classList.contains('oled');
+      if (isOLED) { body.classList.remove('oled'); }
+      else { body.classList.add('oled'); }
+    });
+
+    var navbarButton = document.getElementById("navbarToggle");
+    const navbar = document.getElementById("bottom-nav")
+    navbarButton.addEventListener('click', () => {
+      const isClosed = navbar.classList.contains('closed');
+      if (isClosed) { navbar.classList.remove('closed'); }
+      else { navbar.classList.add('closed') };
+    });
+
   </script>
 </body>
 

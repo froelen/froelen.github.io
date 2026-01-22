@@ -22,21 +22,30 @@ tasks : make an oled mode (replace #000212 with #000 and force dark theme)
         finish design lol
         finish page also
 */
-body {
-  background: url("ressources/links-background.svg");
-  background-size: cover;
-  /*background: #f7f8ff;*/
+
+:root {
+  --base-font-size: 1rem;
+  --main-line-height: 1.4;
+
   --radius-factor: 1;
   --sharp: 0px;
   --medium: calc(8px * var(--radius-factor));
   --soft: calc(100px * var(--radius-factor));
-  --radius: var(--sharp);
+  --radius: var(--medium);
   /* change --radius-factor and --radius for easy design switch */
+}
+
+body {
+  background: url("ressources/links-background.svg");
+  background-size: cover;
+  /*background: #f7f8ff;*/
 
   margin: 0;
   padding: 0;
   font: 400 1rem "Fira Sans", sans-serif;
   color: #000212;
+
+  height: 100vh;
 }
 
 h1 {
@@ -51,18 +60,12 @@ h1 {
 #top-panel {
   box-shadow: 0 3px 0 #f6a6fc inset, 0 -3px 0 #f6a6fc inset;
   padding: 5px 0;
-  /*font-family: "Fira Sans";
-    font-weight: 400;
-    font-size: 1rem;*/
 }
 
 #top-title {
   margin: 1.5em 0 1em;
   display: flex;
-  /* Remove the gap between the image and text */
   align-items: center;
-  /* Vertically center the text */
-  /*gap: calc(calc(100vw - calc(2*var(--content-margins))) - calc(150px + 144.250px));*/
   justify-content: space-between;
   width: 100%;
   flex-wrap: nowrap;
@@ -82,6 +85,8 @@ h1 {
 #top-about {
   margin: 1em 0 1.5em;
   text-align: justify;
+  line-height: var(--main-line-height);
+  height: calc(var(--base-font-size) * var(--main-line-height) * 2);
 }
 
 #bottom-panel {
@@ -114,14 +119,96 @@ h1 {
 
 #footer {
   margin: 10px;
+  padding: 0 0 35px;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    /*background: url("ressources/links-background-dark.svg");*/
-    background: #000212;
-    color: #f7f8ff;
+/*#colorSchemeToggle {
+  background: #ffffff69;
+  border-radius: 18px;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  color: #000;
+  transition: background-color 0.35s, color 0.35s;
+  font-size: 24px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}*/
+
+#bottom-nav {
+  z-index: 1;
+  display: flex;
+  position: fixed;
+  bottom: 15px;
+  height: 35px;
+  user-select: none;
+  align-items: center;
+  justify-content: center;
+
+  background: #f6a6fc;
+  padding: 0 15px;
+  right: 50%;
+  transform: translateX(50%);
+  margin: auto;
+  width: fit-content;
+  max-width: 50%;
+
+  overflow-x: auto;
+  white-space: nowrap;
+
+  gap: 10px;
+
+  border-radius: var(--radius);
+}
+
+#bottom-nav.closed {
+  right: 15px;
+  transform: none;
+  padding: 0;
+  width: 35px;
+
+
+  #colorThemeToggle,
+  #oledThemeToggle {
+    display: none;
   }
+
+
+  #closeNavbarToggle {
+    width: 24px;
+  }
+}
+
+.navbar-button {
+  width: 48px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  font: 500 0.8rem "Onest", serif;
+  border: none;
+  background: #ffffff90;
+  border-radius: calc(var(--radius) - 4.5px);
+}
+
+#colorSchemeToggle:hover {
+  background: #fff;
+}
+
+#colorSchemeToggle:active {
+  outline: 2px solid #00b8a5;
+  outline-offset: 2px;
+}
+
+body.dark {
+  background: url("ressources/links-background-dark.svg");
+  color: #f7f8ff;
+}
+
+.dark {
 
   #profile {
     border-color: #f7f8ff;
@@ -144,6 +231,10 @@ h1 {
   }
 }
 
+.oled {
+  background: #000;
+  color: #f7f8ff
+}
 
 
 @media invalid and (layout: old) {
