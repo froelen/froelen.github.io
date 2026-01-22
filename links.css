@@ -203,10 +203,15 @@ h1 {
   outline-offset: 2px;
 }
 
+/*            */
+/* Dark theme */
+/*            */
+
 body.dark {
   background: url("ressources/links-background-dark.svg");
   color: #f7f8ff;
 }
+
 
 .dark {
 
@@ -218,6 +223,32 @@ body.dark {
     content: url("./ressources/github-dark.svg");
   }
 }
+
+/*            */
+/* OLED theme */
+/*            */
+
+#oled-disclaimer {
+  display: none;
+}
+
+body.oled {
+  background: #000;
+  color: #f7f8ff;
+
+  #oled-disclaimer {
+    margin: 15px;
+    border: 2px solid red;
+    border-radius: var(--radius);
+    padding: 5px;
+    background: #ff000075;
+    display: block;
+    font: 400 1rem monospace;
+    color: white;
+    text-align: justify;
+  }
+}
+
 
 @media screen and (min-width: 660px) {
   body {
@@ -231,10 +262,6 @@ body.dark {
   }
 }
 
-.oled {
-  background: #000;
-  color: #f7f8ff
-}
 
 
 @media invalid and (layout: old) {

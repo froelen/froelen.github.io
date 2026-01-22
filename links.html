@@ -20,6 +20,7 @@
 </head>
 
 <body>
+  <div id="oled-disclaimer">OLED mode is experimental! Some features may be buggy, or elements may disappear.</div>
   <h1>froelen・links</h1>
   <div id="main-content">
     <div id="top-panel" class="panel">
@@ -81,48 +82,48 @@
     </p>
   </div>
   <nav id="bottom-nav">
-    <button id="themeToggle" class="navbar-button">☼</button>
+    <button id="schemeToggle" class="navbar-button">☼</button>
     <button id="oledToggle" class="navbar-button">OLED</button>
     <button id="navbarToggle" class="navbar-button">X</button>
   </nav>
   <script>
-    const body = document.body
+    const body = document.body;
     body.classList.add(getEngine().toLowerCase());
 
-    // gets the prefered colored theme
-    const isDarkPrefered = window.matchMedia('(prefers-color-scheme: dark)');
-    if (isDarkPrefered) { body.classList.add('dark') }
-    // handles changes of isDarkPrefered (switches theme if different, stays the same if themes match)
+    // Color Scheme handler
+    const colorSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+    if (colorSchemeQuery.matches) { body.classList.add('dark'); }
+    else { body.classList.remove('dark'); }
+
     function handleThemeChange(event) {
       if (event.matches) {
-        if (body.classList.contains('dark')) { body.classList.remove('dark'); }
-        else { body.classList.add('dark') }
+        body.classList.add('dark');
+      } else {
+        body.classList.remove('dark');
       }
     }
 
-    // starts monitoring for isDarkPrefered changes and launches related function
-    isDarkPrefered.addEventListener('change', handleThemeChange);
+    colorSchemeQuery.addEventListener('change', handleThemeChange);
 
-    const themeToggle = document.getElementById("themeToggle");
-    themeToggle.addEventListener('click', () => {
-      if (body.classList.contains('dark')) { body.classList.remove('dark') }
-      else { body.classList.add('dark') }
+    const schemeToggle = document.getElementById("schemeToggle");
+    schemeToggle.addEventListener('click', () => { body.classList.toggle('dark'); });
+    // Color Scheme handler end
+
+    var toggleButton = document.getElementById("oledToggle")
+    toggleButton.addEventListener('click', () => {
+      const isOLED = body.classList.contains('oled')
+      if (isOLED) { body.classList.remove('oled'); }
+      else { body.classList.add('oled') }
     })
 
-    var toggleButton = document.getElementById("oledToggle");
-    toggleButton.addEventListener('click', () => {
-      const isOLED = body.classList.contains('oled');
-      if (isOLED) { body.classList.remove('oled'); }
-      else { body.classList.add('oled'); }
-    });
-
-    var navbarButton = document.getElementById("navbarToggle");
+    var navbarButton = document.getElementById("navbarToggle")
     const navbar = document.getElementById("bottom-nav")
     navbarButton.addEventListener('click', () => {
-      const isClosed = navbar.classList.contains('closed');
-      if (isClosed) { navbar.classList.remove('closed'); }
-      else { navbar.classList.add('closed') };
-    });
+      const isClosed = navbar.classList.contains('closed')
+      if (isClosed) { navbar.classList.remove('closed') }
+      else { navbar.classList.add('closed') }
+    })
 
   </script>
 </body>
