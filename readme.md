@@ -1,14 +1,9 @@
-# froelen's website
+# froelen.github.io
 
-## Important Note
-This website was created and is maintained by [froelen](github.com/froelen) (me). It is shared-source for other people to look into it if they wish. However, please credit my work if you copy or reuse code or assets for you personal use.
+Hi! This website was created and is managed and maintaned by me (froelen) :)
 
-## To do
-- [ ] Adjust kofi integration for Firefox
-- [ ] Add Discord tile
-- [ ] Add X (Twitter) tile
-- - [ ] Replace with latest post tile
-- [ ] Add or replace GitHub tile with user graph
-- [ ] Create dashboard to easily add / remove tiles
-- [ ] Upgrade dashboard to allow pfp, name, and bio customization
-- [ ] Upgrade dashboard to allow editing and moving tiles
+It is shared source, so that other people can easily access the code behind it.
+
+If you fork it and do a pull request, unless it addresses something that i really need, or is about privacy / security / accessibility AND is coherent with the current state of the website, I probably won't merge it.
+
+Feel free to read, test things, fork it, and take parts of this code for your own project, although I'd appreciate you crediting me if what you end up using it (whether it is raw code or inspiration).
