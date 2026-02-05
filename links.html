@@ -84,6 +84,7 @@
   <nav id="bottom-nav">
     <button id="schemeToggle" class="navbar-button">☼</button>
     <button id="oledToggle" class="navbar-button">OLED</button>
+    <button id="indexReturn" class="navbar-button">Back</button>
     <button id="navbarToggle" class="navbar-button">X</button>
   </nav>
   <script>
@@ -117,6 +118,11 @@
       else { body.classList.add('oled') }
     })
 
+    var indexReturn = document.getElementById("indexReturn")
+    indexReturn.addEventListener('click', () => {
+      window.location.href = "index.html"
+    })
+
     var navbarButton = document.getElementById("navbarToggle")
     const navbar = document.getElementById("bottom-nav")
     navbarButton.addEventListener('click', () => {
@@ -124,7 +130,6 @@
       if (isClosed) { navbar.classList.remove('closed') }
       else { navbar.classList.add('closed') }
     })
-
   </script>
 </body>
 

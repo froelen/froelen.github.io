@@ -17,12 +17,6 @@
   for interactives elements (e.g. buttons)*/
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
 
-/*
-tasks : make an oled mode (replace #000212 with #000 and force dark theme)
-        finish design lol
-        finish page also
-*/
-
 :root {
   --base-font-size: 1rem;
   --main-line-height: 1.4;
@@ -38,14 +32,15 @@ tasks : make an oled mode (replace #000212 with #000 and force dark theme)
 body {
   background: url("ressources/links-background.svg");
   background-size: cover;
-  /*background: #f7f8ff;*/
 
   margin: 0;
-  padding: 0;
+  padding: 0 calc((100vw - 660px) / 2);
   font: 400 1rem "Fira Sans", sans-serif;
   color: #000212;
 
   height: 100vh;
+
+  max-width: 660px;
 }
 
 h1 {
@@ -63,11 +58,11 @@ h1 {
 }
 
 #top-title {
-  margin: 1.5em 0 1em;
+  margin: 1.5em 1em 1em;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  /*width: 100%;*/
   flex-wrap: nowrap;
 }
 
@@ -83,7 +78,7 @@ h1 {
 }
 
 #top-about {
-  margin: 1em 0 1.5em;
+  margin: 1em 1em 1.5em;
   text-align: justify;
   line-height: var(--main-line-height);
   height: calc(var(--base-font-size) * var(--main-line-height) * 2);
@@ -96,7 +91,7 @@ h1 {
 }
 
 .tile {
-  --tile-padding-vertical: 5px;
+  --tile-padding-vertical: 0.5em;
   --tile-padding-horizontal: 10px;
   --tile-width: calc(100vw - calc(calc(2*var(--tile-padding-horizontal)) + calc(2*var(--content-margins))));
   margin: 20px 0;
@@ -118,25 +113,10 @@ h1 {
 }
 
 #footer {
-  margin: 10px;
-  padding: 0 0 35px;
+  margin: 10px 1em;
+  /* (navbar height * 1.5) paddingt at the bottom to make place for the navbar */
+  padding: 0 0 calc(35px * 1.5);
 }
-
-/*#colorSchemeToggle {
-  background: #ffffff69;
-  border-radius: 18px;
-  padding: 5px;
-  width: 50px;
-  height: 50px;
-  color: #000;
-  transition: background-color 0.35s, color 0.35s;
-  font-size: 24px;
-  margin: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  user-select: none;
-}*/
 
 #bottom-nav {
   z-index: 1;
@@ -149,7 +129,7 @@ h1 {
   justify-content: center;
 
   background: #f6a6fc;
-  padding: 0 15px;
+  padding: 0 5px;
   right: 50%;
   transform: translateX(50%);
   margin: auto;
@@ -159,7 +139,7 @@ h1 {
   overflow-x: auto;
   white-space: nowrap;
 
-  gap: 10px;
+  gap: 5px;
 
   border-radius: var(--radius);
 }
@@ -172,7 +152,8 @@ h1 {
 
 
   #schemeToggle,
-  #oledToggle {
+  #oledToggle,
+  #indexReturn {
     display: none;
   }
 
@@ -183,19 +164,20 @@ h1 {
 }
 
 .navbar-button {
-  width: 48px;
-  height: 24px;
+  width: 45px;
+  height: 25px;
   justify-content: center;
   align-items: center;
   padding: 0;
   font: 500 0.8rem "Onest", serif;
   border: none;
   background: #ffffff90;
-  border-radius: calc(var(--radius) - 4.5px);
+  border-radius: calc(var(--radius) - 4px);
 }
 
 #colorSchemeToggle:hover {
   background: #fff;
+  color: red;
 }
 
 #colorSchemeToggle:active {
@@ -203,10 +185,7 @@ h1 {
   outline-offset: 2px;
 }
 
-/*            */
 /* Dark theme */
-/*            */
-
 body.dark {
   background: url("ressources/links-background-dark.svg");
   color: #f7f8ff;
@@ -224,10 +203,7 @@ body.dark {
   }
 }
 
-/*            */
 /* OLED theme */
-/*            */
-
 #oled-disclaimer {
   display: none;
 }
@@ -249,159 +225,12 @@ body.oled {
   }
 }
 
-
-@media screen and (min-width: 660px) {
-  body {
-    background: red;
+/* BREAKPOINTS */
+@media screen and (min-width: 422px) {
+  #top-about {
+    margin: 1em auto;
+    text-align: center;
+    max-width: 360px;
+    align-self: center;
   }
 }
-
-@media screen and (min-width: 900px) {
-  body {
-    background: blue;
-  }
-}
-
-
-
-@media invalid and (layout: old) {
-  body {
-    background: #f7f8ff;
-    font-family: "Fira Sans";
-  }
-
-  h1 {
-    display: none;
-  }
-
-  #main-content {
-    margin: 5em auto !important;
-    width: 75vw;
-    display: flex;
-    gap: 5vw;
-
-    --left-panel-width: 26vw;
-    --right-panel-width: 44vw;
-    --panel-padding: 10px;
-
-    --grid-gap: 10px;
-    --column-count: 4;
-    --column-width: calc((var(--right-panel-width) - (var(--panel-padding) * 2) - (var(--grid-gap) * (var(--column-count) - 1))) / var(--column-count));
-
-    --tile-radius: calc(var(--column-width) / 3.5);
-    --outer-radius: calc(var(--tile-radius) + var(--panel-padding));
-  }
-
-  #left-panel {
-    outline: 3px solid #f6a6fc;
-    border-radius: var(--outer-radius);
-    padding: var(--panel-padding);
-    width: var(--left-panel-width);
-  }
-
-  #left-panel-top {
-    display: flex;
-    gap: 10px
-  }
-
-  #profile {
-    border: 2px dashed #00021250;
-    border-radius: var(--tile-radius);
-    user-select: none;
-  }
-
-  #name {
-    margin: 65px auto auto;
-    display: flex;
-    font-size: 44px;
-  }
-
-  #about {
-    margin: 0;
-    padding: 0.75vw;
-    font-size: 24px;
-    text-align: justify;
-  }
-
-  #right-panel {
-    outline: 3px solid #f6a6fc;
-    border-radius: var(--outer-radius);
-    padding: var(--panel-padding);
-    width: var(--right-panel-width);
-
-    display: grid;
-    grid-template-columns: repeat(var(--column-count), var(--column-width));
-    grid-template-rows: repeat(4, var(--column-width));
-    grid-auto-flow: dense;
-    gap: var(--grid-gap);
-  }
-
-  [class^="tile-"] {
-    border: 2px solid #000;
-    border-radius: var(--tile-radius);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-  }
-
-  .tile-1x2 {
-    grid-row: span 2;
-  }
-
-  .tile-2x1 {
-    grid-column: span 2;
-  }
-
-  .tile-2x2 {
-    grid-column: span 2;
-    grid-row: span 2;
-    aspect-ratio: 1 / 1;
-  }
-
-  .tile-2x3 {
-    grid-column: span 2;
-    grid-row: span 3;
-  }
-
-  .tile-icon {
-    border: 0;
-    border-radius: 10px;
-    width: 75%;
-  }
-
-  #github {
-    border: 2px solid #1b1f24;
-
-    .tile-icon {
-      width: 80%;
-    }
-
-  }
-
-  #mailto {
-    border: 2px solid #6d4aff;
-  }
-
-  #support {
-    padding: 0;
-    overflow: hidden;
-    justify-content: flex-start;
-  }
-
-  #kofi {
-    border: none;
-    width: 417.5px;
-    height: 100%;
-    flex-shrink: 0;
-  }
-
-  .gecko {
-    #kofi {
-      width: 100%;
-    }
-  }
-}
-
-/* fix needed on Vivaldi */
-/* to check Chrome / Brave / Firefox / Zen */

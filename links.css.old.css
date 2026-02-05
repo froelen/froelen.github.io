@@ -1,0 +1,139 @@
+body {
+  background: #f7f8ff;
+  font-family: "Fira Sans";
+}
+
+h1 {
+  display: none;
+}
+
+#main-content {
+  margin: 5em auto !important;
+  width: 75vw;
+  display: flex;
+  gap: 5vw;
+
+  --left-panel-width: 26vw;
+  --right-panel-width: 44vw;
+  --panel-padding: 10px;
+
+  --grid-gap: 10px;
+  --column-count: 4;
+  --column-width: calc((var(--right-panel-width) - (var(--panel-padding) * 2) - (var(--grid-gap) * (var(--column-count) - 1))) / var(--column-count));
+
+  --tile-radius: calc(var(--column-width) / 3.5);
+  --outer-radius: calc(var(--tile-radius) + var(--panel-padding));
+}
+
+#left-panel {
+  outline: 3px solid #f6a6fc;
+  border-radius: var(--outer-radius);
+  padding: var(--panel-padding);
+  width: var(--left-panel-width);
+}
+
+#left-panel-top {
+  display: flex;
+  gap: 10px
+}
+
+#profile {
+  border: 2px dashed #00021250;
+  border-radius: var(--tile-radius);
+  user-select: none;
+}
+
+#name {
+  margin: 65px auto auto;
+  display: flex;
+  font-size: 44px;
+}
+
+#about {
+  margin: 0;
+  padding: 0.75vw;
+  font-size: 24px;
+  text-align: justify;
+}
+
+#right-panel {
+  outline: 3px solid #f6a6fc;
+  border-radius: var(--outer-radius);
+  padding: var(--panel-padding);
+  width: var(--right-panel-width);
+
+  display: grid;
+  grid-template-columns: repeat(var(--column-count), var(--column-width));
+  grid-template-rows: repeat(4, var(--column-width));
+  grid-auto-flow: dense;
+  gap: var(--grid-gap);
+}
+
+[class^="tile-"] {
+  border: 2px solid #000;
+  border-radius: var(--tile-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.tile-1x2 {
+  grid-row: span 2;
+}
+
+.tile-2x1 {
+  grid-column: span 2;
+}
+
+.tile-2x2 {
+  grid-column: span 2;
+  grid-row: span 2;
+  aspect-ratio: 1 / 1;
+}
+
+.tile-2x3 {
+  grid-column: span 2;
+  grid-row: span 3;
+}
+
+.tile-icon {
+  border: 0;
+  border-radius: 10px;
+  width: 75%;
+}
+
+#github {
+  border: 2px solid #1b1f24;
+
+  .tile-icon {
+    width: 80%;
+  }
+
+}
+
+#mailto {
+  border: 2px solid #6d4aff;
+}
+
+#support {
+  padding: 0;
+  overflow: hidden;
+  justify-content: flex-start;
+}
+
+#kofi {
+  border: none;
+  width: 417.5px;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.gecko {
+  #kofi {
+    width: 100%;
+  }
+}
+
+/* fix needed on Vivaldi */
+/* to check Chrome / Brave / Firefox / Zen */
