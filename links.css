@@ -181,6 +181,7 @@ h1 {
 /* Dark theme */
 body.dark {
   background: url("ressources/links-background-dark.svg");
+  background-size: cover;
   color: #f7f8ff;
 }
 
