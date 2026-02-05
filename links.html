@@ -22,7 +22,9 @@
 <body>
   <div id="oled-disclaimer">OLED mode is experimental! Some features may be buggy, or elements may disappear.</div>
   <h1>froelen・links</h1>
+
   <div id="main-content">
+
     <div id="top-panel" class="panel">
       <div id="top-title">
         <img id="profile" draggable="false" src="./ressources/profile-picture.png" alt="froelen's profile picture" width="150px" height="150px">
@@ -32,20 +34,8 @@
         Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present.
       </p>
     </div>
+
     <div id="bottom-panel" class="panel">
-      <!-- list of links: github (1:1) & github chart (2:1 or 4:1) / mail (1:1) / paypal ou kofi (1:1) / discord (1:1) / X Twitter latest post (2:2) -->
-      <!--
-      <a class="tile-1x1" id="github" href="github.html" target="_blank">
-        <img class="tile-icon" src="./ressources/github.svg" onerror="this.onerror=null; this.src='./ressources/missing.svg';" alt="GitHub">
-      </a>
-      <a class="tile-1x1" id="mailto" href="mailto:marius.trouillon@proton.me" target="_blank">
-        <img class="tile-icon" src="./ressources/proton-mail.svg" onerror="this.onerror=null;this.src='./ressources/missing.svg';"
-          alt="Send me an email">
-      </a>
-      <a class="tile-2x3" id="support">
-        <iframe id="kofi" src='https://ko-fi.com/froelen/?hidefeed=true&widget=true&embed=true&preview=true' title='Buy me a baguette'></iframe>
-      </a>
-      -->
       <a id="github" class="tile" href="github.html" target="_blank">
         <img id="github-icon" class="icon" src="./ressources/github.svg"
           onerror="this.onerror=null; this.src='./ressources/missing.svg'; this.classList.add('missing-icon')" alt="GitHub">
@@ -72,7 +62,9 @@
         Send an email
       </a>
     </div>
+
   </div>
+
   <div id="footer">
     <p id="footer-note">
       This webpage is a personal project of the website's owner (<a class="footer-note-link" href="index.html">froelen</a>). You may find its code at
@@ -81,12 +73,14 @@
       Credits to HelmiP, Mozilla FireFox, and PrimeTek: <a href="credits.html">see here</a>.
     </p>
   </div>
+
   <nav id="bottom-nav">
     <button id="schemeToggle" class="navbar-button">☼</button>
     <button id="oledToggle" class="navbar-button">OLED</button>
     <button id="indexReturn" class="navbar-button">Back</button>
     <button id="navbarToggle" class="navbar-button">X</button>
   </nav>
+
   <script>
     const body = document.body;
     body.classList.add(getEngine().toLowerCase());
