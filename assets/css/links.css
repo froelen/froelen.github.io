@@ -34,7 +34,7 @@ body {
   min-height: 100vh;
   max-width: 660px;
 
-  background: url("ressources/links-background.svg");
+  background: url("../images/backgrounds/links-background.svg");
   background-size: cover;
   font: 400 1rem "Fira Sans", sans-serif;
   color: #000212;
@@ -184,20 +184,21 @@ h1 {
 
 /* Dark theme */
 body.dark {
-  background: url("ressources/links-background-dark.svg");
+  background: url("../images/backgrounds/links-background-dark.svg");
   background-size: cover;
   color: #f7f8ff;
 }
 
 
-.dark {
+.dark,
+.oled {
 
   #profile {
     border-color: #f7f8ff;
   }
 
   #github-icon {
-    content: url("./ressources/github-dark.svg");
+    content: url("../images/icons/github-dark.svg");
   }
 }
 

@@ -2,26 +2,16 @@
 <html lang="en">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q9T9ZEM494"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-Q9T9ZEM494');
-  </script>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="links.css">
+  <link rel="stylesheet" href="../assets/css/links.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100..900;1,100..900&family=Lexend:wght@100..900&family=Onest:wght@100..900&display=swap"
     rel="stylesheet">
   <title>froelen ・ links</title>
-  <script src="scripts.js"></script>
+  <script src="../assets/js/scripts.js"></script>
 </head>
 
 <body>
@@ -32,7 +22,7 @@
 
     <div id="top-panel" class="panel">
       <div id="top-title">
-        <img id="profile" draggable="false" src="./ressources/profile-picture.png" alt="froelen's profile picture" width="150px" height="150px">
+        <img id="profile" draggable="false" src="../assets/images/profile-picture.png" alt="froelen's profile picture" width="150px" height="150px">
         <h2 id="name">froelen</h2>
       </div>
       <p id="top-about">
@@ -41,29 +31,29 @@
     </div>
 
     <div id="bottom-panel" class="panel">
-      <a id="github" class="tile" href="github.html" target="_blank">
-        <img id="github-icon" class="icon" src="./ressources/github.svg"
-          onerror="this.onerror=null; this.src='./ressources/missing.svg'; this.classList.add('missing-icon')" alt="GitHub">
+      <a id="github" class="tile" href="../github.html" target="_blank">
+        <img id="github-icon" class="icon" src="../assets/images/icons/github.svg"
+          onerror="this.onerror=null; this.src='../assets/images/icons/missing.svg'; this.classList.add('missing-icon')" alt="GitHub">
         GitHub
       </a>
-      <a id="instagram" class="tile" href="instagram.html" target="_blank">
-        <img id="instagram-icon" class="icon" src="./ressources/instagram.svg"
-          onerror="this.onerror=null; this.src='./ressources/missing.svg'; this.classList.add('missing-icon')" alt="Instagram">
+      <a id="instagram" class="tile" href="../instagram.html" target="_blank">
+        <img id="instagram-icon" class="icon" src="../assets/images/icons/instagram.svg"
+          onerror="this.onerror=null; this.src='../assets/images/icons/missing.svg'; this.classList.add('missing-icon')" alt="Instagram">
         Instagram
       </a>
       <a id="portfolio" class="tile" href="portfolio.html" target="_blank">
-        <img id="portfolio-icon" class="icon" src="./ressources/portfolio.svg"
-          onerror="this.onerror=null; this.src='./ressources/missing.svg'; this.classList.add('missing-icon')" alt="Portfolio">
+        <img id="portfolio-icon" class="icon" src="../assets/images/icons/portfolio.svg"
+          onerror="this.onerror=null; this.src='../assets/images/icons/missing.svg'; this.classList.add('missing-icon')" alt="Portfolio">
         Portfolio (unavailable)
       </a>
-      <a id="discord" class="tile" href="discord.html" target="_blank">
-        <img id="discord-icon" class="icon" src="./ressources/discord.svg"
-          onerror="this.onerror=null; this.src='./ressources/missing.svg'; this.classList.add('missing-icon')" alt="Discord">
+      <a id="discord" class="tile" href="../discord.html" target="_blank">
+        <img id="discord-icon" class="icon" src="../assets/images/icons/discord.svg"
+          onerror="this.onerror=null; this.src='../assets/images/icons/missing.svg'; this.classList.add('missing-icon')" alt="Discord">
         Discord profile
       </a>
-      <a id="mailto" class="tile" href="mailto.html" target="_blank">
-        <img id="mailto-icon" class="icon" src="./ressources/send.svg"
-          onerror="this.onerror=null; this.src='./ressources/missing.svg'; this.classList.add('missing-icon')" alt="Send an email">
+      <a id="mailto" class="tile" href="../mailto.html" target="_blank">
+        <img id="mailto-icon" class="icon" src="../assets/images/icons/send.svg"
+          onerror="this.onerror=null; this.src='../assets/images/icons/missing.svg'; this.classList.add('missing-icon')" alt="Send an email">
         Send an email
       </a>
     </div>
@@ -119,7 +109,7 @@
 
     var indexReturn = document.getElementById("indexReturn")
     indexReturn.addEventListener('click', () => {
-      window.location.href = "index.html"
+      window.location.href = "../"
     })
 
     var navbarButton = document.getElementById("navbarToggle")
