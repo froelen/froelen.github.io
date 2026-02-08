@@ -5,56 +5,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/css/links.css">
-  <link rel="stylesheet" href="../assets/css/fr-links.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100..900;1,100..900&family=Lexend:wght@100..900&family=Onest:wght@100..900&display=swap"
     rel="stylesheet">
-  <title>froelen ・ links</title>
+  <title>froelen ・ liens</title>
   <script src="../assets/js/scripts.js"></script>
 </head>
 
 <body>
-  <div id="oled-disclaimer">Le mode OLED est expérimental ! Certaines fonctionalités peuvent ne pas fonctionner, ou des éléments pevent disparaître.</div>
+  <div id="oled-disclaimer">Le mode OLED est expérimental ! Certaines fonctionalités peuvent ne pas fonctioner, ou des éléments peuvent disparaître.</div>
   <h1>froelen・liens</h1>
 
   <div id="main-content">
 
     <div id="top-panel" class="panel">
       <div id="top-title">
-        <img id="profile" draggable="false" src="../assets/images/profile-picture.png" alt="Photo de profil de froelen" width="150px" height="150px">
+        <img id="profile" draggable="false" src="../assets/images/profile-picture.png" alt="froelen's profile picture" width="150px" height="150px">
         <h2 id="name">froelen</h2>
       </div>
-      <p id="top-about">
-        Hier fait partie de l'histoire, demain reste à savoir, mais aujourd'hui est un cadeau. C'est pourquoi on l'appelle le présent.
-      </p>
+      <p id="top-about">Hier fait partie de l'histoire, demain reste à savoir, mais auourd'hui est un cadeau. C'est pourquoi on l'appelle le présent.</p>
     </div>
 
     <div id="bottom-panel" class="panel">
       <a id="github" class="tile" href="../github.html" target="_blank">
         <img id="github-icon" class="icon" src="../assets/images/icons/github.svg"
-          onerror="this.onerror=null; this.src='../assets/images/icons/missing.svg'; this.classList.add('missing-icon')" alt="Logo de GitHub">
+          onerror="this.onerror=null; this.src='../assets/images/icons/missing.svg'; this.classList.add('missing-icon')" alt="GitHub">
         GitHub
       </a>
       <a id="instagram" class="tile" href="../instagram.html" target="_blank">
         <img id="instagram-icon" class="icon" src="../assets/images/icons/instagram.svg"
-          onerror="this.onerror=null; this.src='../assets/images/icons/missing.svg'; this.classList.add('missing-icon')" alt="Logo d'Instagram">
+          onerror="this.onerror=null; this.src='../assets/images/icons/missing.svg'; this.classList.add('missing-icon')" alt="Instagram">
         Instagram
       </a>
       <a id="portfolio" class="tile" href="portfolio.html" target="_blank">
         <img id="portfolio-icon" class="icon" src="../assets/images/icons/portfolio.svg"
-          onerror="this.onerror=null; this.src='../assets/images/icons/missing.svg'; this.classList.add('missing-icon')" alt="Icône de portfolio">
+          onerror="this.onerror=null; this.src='../assets/images/icons/missing.svg'; this.classList.add('missing-icon')" alt="Portfolio">
         Portfolio (indisponible)
       </a>
       <a id="discord" class="tile" href="../discord.html" target="_blank">
         <img id="discord-icon" class="icon" src="../assets/images/icons/discord.svg"
-          onerror="this.onerror=null; this.src='../assets/images/icons/missing.svg'; this.classList.add('missing-icon')" alt="Logo de Discord">
+          onerror="this.onerror=null; this.src='../assets/images/icons/missing.svg'; this.classList.add('missing-icon')" alt="Discord">
         Profil Discord
       </a>
       <a id="mailto" class="tile" href="../mailto.html" target="_blank">
         <img id="mailto-icon" class="icon" src="../assets/images/icons/send.svg"
-          onerror="this.onerror=null; this.src='../assets/images/icons/missing.svg'; this.classList.add('missing-icon')" alt="Icône d'avion en papier">
+          onerror="this.onerror=null; this.src='../assets/images/icons/missing.svg'; this.classList.add('missing-icon')" alt="Send an email">
         Envoyer un email
       </a>
     </div>
@@ -63,10 +60,7 @@
 
   <div id="footer">
     <p id="footer-note">
-      Cette page web est un projet personnel du propriétaire du site (<a class="footer-note-link" href="./">froelen</a>). Vous pouvez trouver son code à <a
-        class="footer-link-note" href="https://github.com/froelen/froelen.github.io" target="_blank">son dépôt</a> pour vous en inspirer. Merci de créditer le
-      travail original si vous réutilisez certaines ressources.<br>
-      Crédits à HelmiP, Mozilla Firefox, et PrimeTek : <a href="credits.html">voir ici</a>.
+      Cette page web est un projet personnel du propriétaire du site (<a class="footer-note-link" href="index.html">froelen</a>). Vous pouvez trouver son code source à <a class="footer-link-note" href="https://github.com/froelen/froelen.github.io" target="_blank">son dépôt</a> pour vous inspirer. Merci de créditer le travail original si vous réutilisez certaines ressources.<br> Crédits à HelmiP, Mozilla Firefox, et PrimeTek : <a href="credits.html">voir ici</a>.
     </p>
   </div>
 
@@ -79,7 +73,6 @@
 
   <script>
     const body = document.body;
-
     body.classList.add(getEngine().toLowerCase());
 
     // Color Scheme handler
@@ -100,8 +93,8 @@
 
     const schemeToggle = document.getElementById("schemeToggle");
     schemeToggle.addEventListener('click', () => { body.classList.toggle('dark'); });
+    // Color Scheme handler end
 
-    // navbar buttons
     var toggleButton = document.getElementById("oledToggle")
     toggleButton.addEventListener('click', () => {
       const isOLED = body.classList.contains('oled')
@@ -111,7 +104,7 @@
 
     var indexReturn = document.getElementById("indexReturn")
     indexReturn.addEventListener('click', () => {
-      window.location.href = "../"
+      window.location.href = "."
     })
 
     var navbarButton = document.getElementById("navbarToggle")
