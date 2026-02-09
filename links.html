@@ -2,134 +2,39 @@
 <html lang="en">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q9T9ZEM494"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-Q9T9ZEM494');
-  </script>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="links.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100..900;1,100..900&family=Lexend:wght@100..900&family=Onest:wght@100..900&display=swap"
-    rel="stylesheet">
-  <title>froelen ・ links</title>
-  <script src="scripts.js"></script>
+
+  <title>froelen ・ Links</title>
+  <meta name="description" content="Find all profiles of froelen, easily.">
+
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <link rel="canonical" href="https://froelen.github.io/en/links">
+
+  <meta property="og:title" content="froelen's links - Computer Science student">
+  <meta property="og:description" content="Discover who I am and what I do.">
+  <meta property="og:url" content="https://froelen.github.io/en/links">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://froelen.github.io/assets/images/og-image.jpg">
+  <meta property="og:locale" content="en_US">
+
+  <link rel="alternate" hreflang="fr" href="https://froelen.github.io/fr/">
+  <link rel="alternate" hreflang="en" href="https://froelen.github.io/en/">
+  <link rel="alternate" hreflang="x-default" href="https://froelen.github.io/en/">
+
+  <link rel="stylesheet" href="../assets/css/global.css">
+  <link rel="stylesheet" href="../assets/css/index.css">
+
+  <link rel="preload" href="../assets/css/global.css" as="style">
+
+  <meta name="author" content="froelen">
+  <meta name="copyright" content="© 2026 froelen">
+
+  <meta name="google" content="notranslate">
+  <meta name="theme-color" content="#fff">
+
+  <meta http-equiv="refresh" content="0; url=./en/links">
 </head>
-
-<body>
-  <div id="oled-disclaimer">OLED mode is experimental! Some features may be buggy, or elements may disappear.</div>
-  <h1>froelen・links</h1>
-
-  <div id="main-content">
-
-    <div id="top-panel" class="panel">
-      <div id="top-title">
-        <img id="profile" draggable="false" src="./ressources/profile-picture.png" alt="froelen's profile picture" width="150px" height="150px">
-        <h2 id="name">froelen</h2>
-      </div>
-      <p id="top-about">
-        Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called the present.
-      </p>
-    </div>
-
-    <div id="bottom-panel" class="panel">
-      <a id="github" class="tile" href="github.html" target="_blank">
-        <img id="github-icon" class="icon" src="./ressources/github.svg"
-          onerror="this.onerror=null; this.src='./ressources/missing.svg'; this.classList.add('missing-icon')" alt="GitHub">
-        GitHub
-      </a>
-      <a id="instagram" class="tile" href="instagram.html" target="_blank">
-        <img id="instagram-icon" class="icon" src="./ressources/instagram.svg"
-          onerror="this.onerror=null; this.src='./ressources/missing.svg'; this.classList.add('missing-icon')" alt="Instagram">
-        Instagram
-      </a>
-      <a id="portfolio" class="tile" href="portfolio.html" target="_blank">
-        <img id="portfolio-icon" class="icon" src="./ressources/portfolio.svg"
-          onerror="this.onerror=null; this.src='./ressources/missing.svg'; this.classList.add('missing-icon')" alt="Portfolio">
-        Portfolio (unavailable)
-      </a>
-      <a id="discord" class="tile" href="discord.html" target="_blank">
-        <img id="discord-icon" class="icon" src="./ressources/discord.svg"
-          onerror="this.onerror=null; this.src='./ressources/missing.svg'; this.classList.add('missing-icon')" alt="Discord">
-        Discord profile
-      </a>
-      <a id="mailto" class="tile" href="mailto.html" target="_blank">
-        <img id="mailto-icon" class="icon" src="./ressources/send.svg"
-          onerror="this.onerror=null; this.src='./ressources/missing.svg'; this.classList.add('missing-icon')" alt="Send an email">
-        Send an email
-      </a>
-    </div>
-
-  </div>
-
-  <div id="footer">
-    <p id="footer-note">
-      This webpage is a personal project of the website's owner (<a class="footer-note-link" href="index.html">froelen</a>). You may find its code at
-      <a class="footer-link-note" href="https://github.com/froelen/froelen.github.io" target="_blank">its repository</a> for inspiration. Please
-      credit the original work if you end up reusing some assets.<br>
-      Credits to HelmiP, Mozilla FireFox, and PrimeTek: <a href="credits.html">see here</a>.
-    </p>
-  </div>
-
-  <nav id="bottom-nav">
-    <button id="schemeToggle" class="navbar-button">☼</button>
-    <button id="oledToggle" class="navbar-button">OLED</button>
-    <button id="indexReturn" class="navbar-button">Back</button>
-    <button id="navbarToggle" class="navbar-button">X</button>
-  </nav>
-
-  <script>
-    const body = document.body;
-    body.classList.add(getEngine().toLowerCase());
-
-    // Color Scheme handler
-    const colorSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-
-    if (colorSchemeQuery.matches) { body.classList.add('dark'); }
-    else { body.classList.remove('dark'); }
-
-    function handleThemeChange(event) {
-      if (event.matches) {
-        body.classList.add('dark');
-      } else {
-        body.classList.remove('dark');
-      }
-    }
-
-    colorSchemeQuery.addEventListener('change', handleThemeChange);
-
-    const schemeToggle = document.getElementById("schemeToggle");
-    schemeToggle.addEventListener('click', () => { body.classList.toggle('dark'); });
-    // Color Scheme handler end
-
-    var toggleButton = document.getElementById("oledToggle")
-    toggleButton.addEventListener('click', () => {
-      const isOLED = body.classList.contains('oled')
-      if (isOLED) { body.classList.remove('oled'); }
-      else { body.classList.add('oled') }
-    })
-
-    var indexReturn = document.getElementById("indexReturn")
-    indexReturn.addEventListener('click', () => {
-      window.location.href = "index.html"
-    })
-
-    var navbarButton = document.getElementById("navbarToggle")
-    const navbar = document.getElementById("bottom-nav")
-    navbarButton.addEventListener('click', () => {
-      const isClosed = navbar.classList.contains('closed')
-      if (isClosed) { navbar.classList.remove('closed') }
-      else { navbar.classList.add('closed') }
-    })
-  </script>
-</body>
 
 </html>
