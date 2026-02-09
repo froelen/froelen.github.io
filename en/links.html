@@ -36,7 +36,7 @@
   <meta name="google" content="notranslate">
   <meta name="theme-color" content="#fff">
 
-  <script src="../assets/js/scripts.js" defer></script>
+  <script src="../assets/js/scripts.js"></script>
 </head>
 
 <body>
@@ -93,6 +93,7 @@
     <button id="schemeToggle" class="navbar-button">☼</button>
     <button id="oledToggle" class="navbar-button">OLED</button>
     <button id="indexReturn" class="navbar-button">Back</button>
+    <button id="languageToggle" class="navbar-button"><img id="lang-button" src="../assets/images/icons/lang.svg" alt="Translate the page."></button>
     <button id="navbarToggle" class="navbar-button">X</button>
   </nav>
 
@@ -122,6 +123,7 @@
 
     var toggleButton = document.getElementById("oledToggle")
     toggleButton.addEventListener('click', () => {
+      console.log('click')
       const isOLED = body.classList.contains('oled')
       if (isOLED) { body.classList.remove('oled'); }
       else { body.classList.add('oled') }
@@ -129,12 +131,21 @@
 
     var indexReturn = document.getElementById("indexReturn")
     indexReturn.addEventListener('click', () => {
+      console.log('click')
       window.location.href = "."
+    })
+
+    var languageToggle = document.getElementById('languageToggle')
+    languageToggle.addEventListener('click', () => {
+      console.log('click')
+      if ('en' === 'en') { window.location.href = "../fr/links" }
+      else { window.location.href = "../en/links" }
     })
 
     var navbarButton = document.getElementById("navbarToggle")
     const navbar = document.getElementById("bottom-nav")
     navbarButton.addEventListener('click', () => {
+      console.log('click')
       const isClosed = navbar.classList.contains('closed')
       if (isClosed) { navbar.classList.remove('closed') }
       else { navbar.classList.add('closed') }
