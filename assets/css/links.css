@@ -182,13 +182,17 @@ h1 {
   font: 500 0.8rem "Onest", serif;
 }
 
+#lang-button {
+  height: 22.5px;
+  transform: translateY(1px)
+}
+
 /* Dark theme */
 body.dark {
   background: url("../images/backgrounds/links-background-dark.svg");
   background-size: cover;
   color: #f7f8ff;
 }
-
 
 .dark,
 .oled {
