@@ -1,0 +1,240 @@
+/*  COLOR PALETTE
+    #f6a6fc light pink
+    #9ff7fb blue
+    #ca47a4 pink
+    #352f77 purple
+    #000212 black
+    #f7f8ff white
+*/
+
+/*font: 400 1rem "Fira Sans"; sans-serif;
+  for bodies of text*/
+/*@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');*/
+/*font: 750 2.5rem "Lexend", serif;
+  for titles*/
+/*@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');*/
+/*font: "Onest";
+  for interactives elements (e.g. buttons)*/
+/*@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');*/
+
+:root {
+  --base-font-size: 1rem;
+  --main-line-height: 1.4;
+
+  --radius-factor: 1;
+  --sharp: 0px;
+  --medium: calc(8px * var(--radius-factor));
+  --soft: calc(100px * var(--radius-factor));
+  --radius: var(--medium);
+  /* change --radius-factor and --radius for easy design switch */
+}
+
+body {
+  margin: 0 auto;
+  min-height: 100vh;
+  max-width: 660px;
+
+  background: url("../images/backgrounds/links-background.svg");
+  background-size: cover;
+  font: 400 1rem "Fira Sans", sans-serif;
+  color: #000212;
+}
+
+body.gecko #bottom-panel .tile {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  display: none;
+}
+
+#main-content {
+  --content-margins: 1em;
+
+  margin: var(--content-margins);
+}
+
+#top-panel {
+  padding: 5px 0;
+  box-shadow: 0 3px 0 #f6a6fc inset, 0 -3px 0 #f6a6fc inset;
+}
+
+#top-title {
+  margin: 1.5em 1em 1em;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#profile {
+  margin-right: -35px;
+  border: 2px dashed #00021250;
+  border-radius: var(--radius);
+
+  user-select: none;
+}
+
+#name {
+  font: 750 2.5rem "Lexend", serif;
+}
+
+#top-about {
+  margin: 1em 1em 1.5em;
+  height: calc(var(--base-font-size) * var(--main-line-height) * 2);
+
+  line-height: var(--main-line-height);
+  text-align: justify;
+}
+
+#bottom-panel {
+  margin: 1.5em 0;
+  padding: 0 0 10vh 0;
+
+  justify-items: center;
+}
+
+.tile {
+  --tile-padding-vertical: 0.5em;
+  --tile-padding-horizontal: 10px;
+  --tile-width: calc(100vw - calc(calc(2*var(--tile-padding-horizontal)) + calc(2*var(--content-margins))));
+
+  margin: 20px 0;
+  padding: var(--tile-padding-vertical) var(--tile-padding-horizontal);
+  border-radius: var(--radius);
+  width: var(--tile-width);
+  max-width: 300px;
+  outline: 2px solid #f6a6fc;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  font: 500 1.1rem "Onest", serif;
+  text-decoration: none;
+}
+
+.icon {
+  height: calc(1em + calc(2*var(--tile-padding-vertical)));
+}
+
+#footer {
+  margin: 10px 1em;
+  /* (navbar height * 1.5) paddingt at the bottom to make place for the navbar */
+  padding: 0 0 calc(35px * 1.5);
+}
+
+#bottom-nav {
+  margin: auto;
+  border-radius: var(--radius);
+  padding: 0 5px;
+  height: 35px;
+  width: fit-content;
+  max-width: 50%;
+
+  z-index: 1;
+  position: fixed;
+  right: 50%;
+  bottom: 15px;
+  transform: translateX(50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background: #f6a6fc;
+
+  user-select: none;
+}
+
+#bottom-nav.closed {
+  padding: 0;
+  width: 35px;
+
+  right: 15px;
+  transform: none;
+
+
+  #schemeToggle,
+  #oledToggle,
+  #indexReturn {
+    display: none;
+  }
+
+
+  #navbarToggle {
+    width: 24px;
+  }
+}
+
+.navbar-button {
+  border: none;
+  border-radius: calc(var(--radius) - 4px);
+  padding: 0;
+  height: 25px;
+  width: 45px;
+
+  align-items: center;
+  justify-content: center;
+  background: #ffffff90;
+  font: 500 0.8rem "Onest", serif;
+}
+
+#lang-button {
+  height: 22.5px;
+  transform: translateY(1px)
+}
+
+/* Dark theme */
+body.dark {
+  background: url("../images/backgrounds/links-background-dark.svg");
+  background-size: cover;
+  color: #f7f8ff;
+}
+
+.dark,
+.oled {
+
+  #profile {
+    border-color: #f7f8ff;
+  }
+
+  #github-icon {
+    content: url("../images/icons/github-dark.svg");
+  }
+}
+
+/* OLED theme */
+#oled-disclaimer {
+  display: none;
+}
+
+body.oled {
+  background: #000;
+  color: #f7f8ff;
+
+  #oled-disclaimer {
+    margin: 15px;
+    border: 2px solid red;
+    border-radius: var(--radius);
+    padding: 5px;
+
+    display: block;
+    background: #ff000075;
+    font: 400 1rem monospace;
+    color: white;
+    text-align: justify;
+  }
+}
+
+/* BREAKPOINTS */
+@media screen and (min-width: 422px) {
+  #top-about {
+    margin: 1em auto;
+    max-width: 360px;
+
+    text-align: center;
+  }
+}

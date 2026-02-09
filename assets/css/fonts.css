@@ -1,0 +1,32 @@
+/* Firava, derived from Fira Sans */
+@font-face {
+  font-family: 'Firava';
+  src: url(../fonts/Firava.woff2) format(woff2);
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* Firava italic */
+@font-face {
+  font-family: 'Firava';
+  src: url(../fonts/FiravaItalic.woff2) format(woff2);
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+}
+
+/* Lexend */
+@font-face {
+  font-family: 'Lexend';
+  src: url(../fonts/Lexend.woff2) format(woff2);
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* Onest */
+@font-face {
+  font-family: 'Onest';
+  src: url(../fonts/Onest.woff2) format(woff2);
+  font-weight: 100 900;
+  font-display: swap;
+}

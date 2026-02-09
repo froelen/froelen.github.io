@@ -1,6 +1,6 @@
 # ignore VS Code workspaces
 *.code-workspace
 
-# build
-src/
+# ignore SSG
 build.js
+src/
