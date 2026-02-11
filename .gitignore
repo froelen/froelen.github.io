@@ -4,3 +4,6 @@
 # ignore SSG
 build.js
 src/
+
+# MacOS things
+.DS_store
