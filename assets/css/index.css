@@ -50,7 +50,7 @@ body {
     height: 35px;
 }
 
-.missing-icon {
+body.dark .missing-icon {
     filter:invert(1);
 }
 
