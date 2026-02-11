@@ -1,56 +1,68 @@
-* {
-    background-color: #030027;
+body {
+    background-color: #000212;
+    font: normal 400 1rem "Firava";
     color: #f7f8ff;
 }
 
-#title {
-    border-top: solid #EFBDEB 0.25rem;
-    margin-top: 2vh;
+#title-bar {
+    border-top: solid #f6a6fc 5px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 #title-section {
+    --title-weight: 600;
+    --title-size: 1.8em;
     display: inline-block;
     text-align: left;
-    color: #ffffff;
-    font-family: "Arial";
-    font-size: 1.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0.5rem;
-    border-bottom: solid #EFBDEB 0.35rem;
-    border-left: solid #EFBDEB 0.35rem;
-    margin: 1.5rem 25vw 0vh 25vw;
+    font: normal var(--title-weight) var(--title-size) "Lexend";
+    padding-bottom: 5px;
+    padding-left: 8px;
+    border-bottom: solid #f6a6fc 5px;
+    border-left: solid #f6a6fc 5px;
+    margin-bottom: 0;
     width: auto;
-    /*margin: 0px;
-  margin-bottom: 0vh;
-  margin-top: 1.5rem;
-  margin-left: 25vw;
-  margin-right: 25vw;*/
 }
 
-#title-section-text {
-    font-weight: bold;
-}
-
-#title-section-username {
-    color: #EFBDEB;
-    font-family: "Trebuchet MS";
+#title-username {
+    font: italic var(--title-weight) calc(var(--title-size) / 1.5) "Trebuchet MS";
+    color: #f6a6fc;
+    /*font-family: "Trebuchet MS";
     font-size: 120%;
     font-style: italic;
-    font-weight: bold;
+    font-weight: bold;*/
     text-align: left;
+}
+
+#title-links {
+    margin-top: 25px;
+    position: absolute;
+    right: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+}
+
+.icon {
+    padding: 2.5px;
+    height: 35px;
+}
+
+.missing-icon {
+    filter:invert(1);
 }
 
 #introduction {
-    color: #ffffff;
-    font-family: Arial;
-    font-size: 1rem;
     margin-left: 25vw;
     margin-right: 25vw;
 }
 
 @media (orientation: portrait) {
+
     #title-section {
-        margin: 1.5rem auto 0vh;
+        margin: 1.5rem auto 5px;
         display: block;
         text-align: center;
         padding-left: 0rem;
