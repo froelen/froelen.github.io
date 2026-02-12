@@ -36,35 +36,54 @@
   <meta name="google" content="notranslate">
   <meta name="theme-color" content="#fff">
 
-  <script src="../assets/js/scripts.js"></script>
+  <script src="../assets/js/scripts.js" defer></script>
 </head>
 
 <body>
-  <div id="title">
-    <p id="title-section">
-      <span id="title-section-text">Hey! I'm </span><span id="title-section-username">froelen</span>
-    </p>
-  </div>
-  <div id="introduction">
-    <p>Click <a href="links.html">here</a> for more info!</p>
-  </div>
+  <nav id="title-bar">
+    <div id="title-lang">
+      <a href="../fr/">français</a> | English
+    </div>
+    <h2 id="title-section">
+      <span id="title-greet"><span>Hey! I'm </span><span id="title-username">froelen</span></span>
+    </h2>
+    <div id="title-links">
+      <a href="../github.html" target="_blank">
+        <img id="github-icon" class="icon" src="../assets/images/icons/github-dark.svg"
+          onerror="this.onerror=null; this.src='../assets/images/icons/missing.svg'; this.classList.add('missing-icon')" alt="Visit my GitHub profile."></a>
+      <a href="../linkedin.html" target="_blank">
+        <img id="linkedin-ivon" class="icon" src="../assets/images/icons/linkedin-white.png"
+          onerror="this.onerror=null; this.src='../assets/images/icons/missing.svg'; this.classList.add('missing-icon')" alt="Visit my LinkedIn page."></a>
+    </div>
+  </nav>
+  <div id="content">
+    <div id="introduction">
+      <p>Computer science student learning through a mix of courses and self-teaching.<br>Currently learning: Python, HTML, CSS, JavaScript. Looking to learn: Java, Rust</p>
+      <p>Click <a href="links.html">here</a> for more info!</p>
+    </div>
 
-  <div>
-    <h2 id="portfolio">Portfolio</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae mollis tortor, ac vehicula velit. Aliquam in arcu at eros bibendum lacinia. Proin eros
-      nulla, eleifend ut volutpat in, vehicula quis metus. Aenean dictum turpis erat, efficitur vehicula augue imperdiet vel. Donec non pellentesque urna. Nulla
-      ullamcorper elementum semper. Suspendisse ac nisl dolor. Morbi nec tristique massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-      per inceptos himenaeos. Nullam hendrerit, tellus vitae scelerisque luctus, odio leo rutrum nisi, sit amet gravida felis eros nec augue. Praesent lorem
-      enim, sagittis et mi pharetra, fringilla placerat velit. Duis eu malesuada mauris, non aliquam enim.</p>
+    <div>
+      <h2 id="portfolio">Portfolio</h2>
+      <ul>
+        <li><a>Ce site web</a></li>
+        <li><a>Static Site Generator</a></li>
+        <li><a>Page d'accueil / Lanveur d'apps</a></li>
+        <li><a>Links Page</a></li>
+        <li><a>Jeu du Pendu</a></li>
+        <li><a>Jeu de la Vie de Conway</a></li>
+        <li><a>Projet Bataille</a></li>
+        <li><a>PyCraft</a></li>
+        <li><a>Doa8BW mod</a></li>
+      </ul>
+    </div>
+    <div id="supporters">
+      <p>Many thanks to everyone supporting me:</p>
+      <ul>
+        <li>Kirbday (my friend!)</li>
+      </ul>
+      <p><a href="https://ko-fi.com/froelen" target="_blank">Buy me a baguette!</a></p>
+    </div>
   </div>
-  <div id="supporters">
-    <p>Many thanks to everyone supporting me:</p>
-    <ul>
-      <li>Kirbday (my friend!)</li>
-    </ul>
-    <p><a href="https://ko-fi.com/froelen" target="_blank">Buy me a baguette!</a></p>
-  </div>
-  <nav><p>Also available in:</p><ul><li><a href="../fr/">français</a></li><li>English</li></ul></nav>
 </body>
 
 </html>

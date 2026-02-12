@@ -1,56 +1,77 @@
-* {
-    background-color: #030027;
+body {
+    --default-margin-left: 22vw;
+    margin: 0;
+    background-color: #000212;
+    font: normal 400 1rem "Firava";
     color: #f7f8ff;
 }
 
-#title {
-    border-top: solid #EFBDEB 0.25rem;
-    margin-top: 2vh;
+#title-bar {
+    --child-margin-top: 20px;
+    border-top: solid #f6a6fc 5px;
+    margin-top: 10px;
+    display: flex;
+    height: 80px
+}
+
+#title-lang {
+    margin-top: var(--child-margin-top);
+    padding-left: 25px;
+    align-self: center;
+    width: calc(22vw - 25px);
 }
 
 #title-section {
-    display: inline-block;
-    text-align: left;
-    color: #ffffff;
-    font-family: "Arial";
-    font-size: 1.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0.5rem;
-    border-bottom: solid #EFBDEB 0.35rem;
-    border-left: solid #EFBDEB 0.35rem;
-    margin: 1.5rem 25vw 0vh 25vw;
-    width: auto;
-    /*margin: 0px;
-  margin-bottom: 0vh;
-  margin-top: 1.5rem;
-  margin-left: 25vw;
-  margin-right: 25vw;*/
+    --title-weight: 600;
+    --title-size: 1.8em;
+    margin-top: var(--child-margin-top);
+    font: normal var(--title-weight) var(--title-size) "Lexend";
+    width: calc(100vw - 44vw);
+    height: 55px;
 }
 
-#title-section-text {
-    font-weight: bold;
+#title-greet {
+    box-shadow: -5px 5px #f6a6fc;
+    padding-left: 8px;
+    padding-bottom: 5px;
 }
 
-#title-section-username {
-    color: #EFBDEB;
-    font-family: "Trebuchet MS";
-    font-size: 120%;
-    font-style: italic;
-    font-weight: bold;
+#title-username {
+    font: italic var(--title-weight) calc(var(--title-size) / 1.5) "Trebuchet MS";
+    color: #f6a6fc;
     text-align: left;
 }
 
-#introduction {
-    color: #ffffff;
-    font-family: Arial;
-    font-size: 1rem;
-    margin-left: 25vw;
-    margin-right: 25vw;
+#title-links {
+    margin-top: var(--child-margin-top);
+    align-items: center;
+    justify-content: right;
+    padding-right: 25px;
+    display: flex;
+    gap: 10px;
+    width: calc(22vw - 25px);
+}
+
+.icon {
+    padding: 2.5px;
+    height: 35px;
+}
+
+body.dark .missing-icon {
+    filter: invert(1);
+}
+
+#content {
+    margin: 0 var(--default-margin-left);
+    width: calc(100vw - 44vw);
+    text-align: justify;
 }
 
 @media (orientation: portrait) {
+
     #title-section {
-        margin: 1.5rem auto 0vh;
+        position: initial;
+        margin-left: 10px;
         display: block;
         text-align: center;
         padding-left: 0rem;
@@ -60,5 +81,11 @@
     #introduction {
         text-align: justify;
         margin: 0 5vw 0 5vw;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    #title-links {
+        transform: translateX(-22vw);
     }
 }
