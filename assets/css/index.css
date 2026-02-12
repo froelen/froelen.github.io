@@ -1,5 +1,6 @@
 body {
-    --content-margins: auto 22vw;
+    --default-margin-left: 22vw;
+    margin: 0;
     background-color: #000212;
     font: normal 400 1rem "Firava";
     color: #f7f8ff;
@@ -9,29 +10,29 @@ body {
     border-top: solid #f6a6fc 5px;
     margin-top: 10px;
     display: flex;
+    height: 60px
 }
 
 #title-lang {
-    position: absolute;
-    left: 25px;
-    margin: 22.5px 0;
+    /*position: absolute;
+    left: 25px;*/
     align-items: center;
-    font-size: 15px;
+    width: 22vw;
 }
 
 #title-section {
     --title-weight: 600;
     --title-size: 1.8em;
-    margin: var(--content-margins);
-    margin-top: 10px;
-    text-align: left;
+    margin: 0 /*var(--default-margin-left)*/;
     font: normal var(--title-weight) var(--title-size) "Lexend";
-    padding-bottom: 5px;
+    width: calc(100vw - 44vw);
+    height: 55px;
+}
+
+#title-greet {
+    box-shadow: -5px 5px #f6a6fc;
     padding-left: 8px;
-    border-bottom: solid #f6a6fc 5px;
-    border-left: solid #f6a6fc 5px;
-    margin-bottom: 0;
-    width: auto;
+    padding-bottom: 5px;
 }
 
 #title-username {
@@ -45,13 +46,13 @@ body {
 }
 
 #title-links {
-    margin-top: 25px;
-    position: absolute;
-    right: 25px;
+    /*position: absolute;
+    right: 25px;*/
     align-items: center;
     justify-content: center;
     display: flex;
     gap: 10px;
+    width: 22vw;
 }
 
 .icon {
@@ -64,7 +65,8 @@ body.dark .missing-icon {
 }
 
 #content {
-    margin: var(--content-margins);
+    margin: 0 var(--default-margin-left);
+    width: calc(100vw - 44vw);
     text-align: justify;
 }
 
