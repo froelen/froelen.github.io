@@ -1,4 +1,5 @@
 body {
+    --content-margins: auto 22vw;
     background-color: #000212;
     font: normal 400 1rem "Firava";
     color: #f7f8ff;
@@ -8,13 +9,21 @@ body {
     border-top: solid #f6a6fc 5px;
     margin-top: 10px;
     display: flex;
-    justify-content: center;
+}
+
+#title-lang {
+    position: absolute;
+    left: 25px;
+    margin: 22.5px 0;
+    align-items: center;
+    font-size: 15px;
 }
 
 #title-section {
     --title-weight: 600;
     --title-size: 1.8em;
-    display: inline-block;
+    margin: var(--content-margins);
+    margin-top: 10px;
     text-align: left;
     font: normal var(--title-weight) var(--title-size) "Lexend";
     padding-bottom: 5px;
@@ -54,15 +63,16 @@ body.dark .missing-icon {
     filter:invert(1);
 }
 
-#introduction {
-    margin-left: 25vw;
-    margin-right: 25vw;
+#content {
+    margin: var(--content-margins);
+    text-align: justify;
 }
 
 @media (orientation: portrait) {
 
     #title-section {
-        margin: 1.5rem auto 5px;
+        position: initial;
+        margin-left: 10px;
         display: block;
         text-align: center;
         padding-left: 0rem;
