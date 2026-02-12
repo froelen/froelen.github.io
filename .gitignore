@@ -2,8 +2,7 @@
 *.code-workspace
 
 # ignore SSG
-build.js
-src/
+ssg-*
 
 # MacOS things
 .DS_store
