@@ -1,0 +1,25 @@
+:root {
+  /* Colors */
+  --white: #F7F8FF;
+  --white-blueish: #D8DBFF;
+  --bacl-blueish: #000212;
+  --pink-bright: #F6A6FC;
+
+  /* Values */
+  --body-margin: 8px;
+}
+
+body {
+  /* Background */
+  background: linear-gradient(110deg, var(--white), var(--white-blueish));
+  
+  /* Text */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: "Firava", sans-serif;
+
+  /* Placement */  
+  margin: var(--body-margin);
+}
+  
