@@ -11,7 +11,7 @@
 
 body {
   /* Background */
-  background: linear-gradient(110deg, var(--white), var(--white-blueish));
+  background: linear-gradient(155deg, var(--white), var(--white-blueish));
   
   /* Text */
   font-style: normal;
