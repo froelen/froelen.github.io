@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Sets default and correct encoding and viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title and description -->
+  <title>froelen's website</title>
+  <meta name="description" content="Get to know froelen, a computer science student, and discover his works.">
+
+  <!-- SEO meta tags for search engines indexation and score optimisation -->
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <link rel="canonical" href="https://froelen.is-a.dev/en/">
+
+  <!-- Open Graph meta tags for social media sharing -->
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:url" content="https://froelen.is-a.dev/en/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://froelen.is-a.dev/assets/images/og-image.jpg">
+  <meta property="og:locale" content="">
+
+  <!-- Alternate language versions for SEO and user experience -->
+  <link rel="alternate" hreflang="en" href="https://froelen.is-a.dev/en/">
+  <link rel="alternate" hreflang="fr" href="https://froelen.is-a.dev/fr/">
+  <link rel="alternate" hreflang="x-default" href="https://froelen.is-a.dev/en/">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/global.css">
+  <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="../assets/css/en-index.css">
+  <link rel="stylesheet" href="../assets/css/fonts.css">
+
+  <link rel="preload" href="../assets/css/fonts.css" as="style">
+  <link rel="preload" href="../assets/css/global.css" as="style">
+  <link rel="preload" href="../assets/css/index.css" as="style">
+
+  <!-- Scripts -->
+  <script src="../assets/js/scripts.js" defer></script>
+
+  <!-- Metadata for SEO & web crawlers and copyright information -->
+  <meta name="author" content="froelen">
+  <meta name="copyright" content="© 2026 froelen">
+  <meta name="google" content="notranslate"> <!-- Prevent Google from translating the page -->
+  <meta name="theme-color" content="#F7F8FF"> <!-- Set the theme color for browsers that support it -->
+</head>
+
+<body>
+  <h1 hidden>froelen's website</h1>
+
+  <header id="header" class="collapsed"> <!-- Top bar elements -->
+    <nav id="navbar"> <!-- Navigation bar -->
+      <div id="navbar-menu"> <!-- Collapsible menu button -->
+        <button id="navbar-menu-button"><img id="menu-icon" class="icon" src="../../assets/images/icons/menu.svg"
+            onerror="this.onerror=null; this.src='../../assets/images/icons/missing.svg'; this.classList.add('icon-missing')"
+            alt="Menu button"></button>
+      </div>
+
+      <div id="nav-lang" class="collapsed"> <!-- Language options -->
+        English | <a href="../fr/">français</a>
+      </div>
+
+      <div id="nav-links" class="collapsed"> <!-- External links -->
+        <a href="../../github.html" target="_blank">
+          <img id="github-icon" class="icon" src="../../assets/images/icons/services/github.svg"
+            onerror="this.onerror=null; this.src='../../assets/images/icons/missing.svg'; this.classList.add('icon-missing')"
+            alt="Visit my GitHub profile."></a>
+        <a href="../../linkedin.html" target="_blank">
+          <img id="linkedin-icon" class="icon" src="../../assets/images/icons/services/linkedin.png"
+            onerror="this.onerror=null; this.src='../../assets/images/icons/missing.svg'; this.classList.add('icon-missing')"
+            alt="Visit my LinkedIn page."></a>
+      </div>
+
+      <script> // Toggles nav-lang and nav-links visibility from menu button
+        const menuButton = document.getElementById('navbar-menu-button');
+        menuButton.addEventListener('click', () => {
+          menuButton.classList.toggle('open')
+          document.getElementById('header').classList.toggle('collapsed');
+          document.getElementById('nav-lang').classList.toggle('collapsed');
+          document.getElementById('nav-links').classList.toggle('collapsed');
+        });
+      </script>
+    </nav>
+
+    <h2 id="title"> <!-- Catchphrase title -->
+      <span id="title-greet">Hey! I'm </span>
+      <span id="title-username">froelen</span>
+    </h2>
+  </header>
+
+  <main>
+    <div id="introduction">
+      <p>Computer science student learning through a mix of courses and self-teaching.<br>Currently learning: Python, HTML, CSS, JavaScript. Looking to learn: Java, Rust</p>
+      <p>Click <a href="links.html">here</a> for my social profiles!</p>
+    </div>
+
+    <div>
+      <h2 id="portfolio">Portfolio</h2>
+      <ul>
+        <li><a>This website</a></li>
+        <li><a>A static site generator (SSG)</a></li>
+        <li><a>The hangman game</a></li>
+        <li><a>Conway's Game of Life</a></li>
+        <li><a>An automatic 'battle' cards game</a></li>
+        <li><a>PyCraft, a sandbox, Terraria-inspired, game</a></li>
+        <li><a>Diary of an 8-Bit Warrior Minecraft mod</a></li>
+        <li><a>A wiki about a book series</a></li>
+        <li><a>CSS easy cheat sheets</a></li>
+        <li><a>Various tech guides</a></li>
+      </ul>
+    </div>
+
+    <div id="supporters">
+      <p>Many thanks to everyone supporting me:</p>
+      <ul>
+        <li>Kirbday</li>
+      </ul>
+      <p><a href="https://ko-fi.com/froelen" target="_blank">Buy me a baguette!</a></p>
+    </div>
+  </main>
+</body>
+
+</html>
