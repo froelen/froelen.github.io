@@ -122,6 +122,25 @@
       <p><a href="https://ko-fi.com/froelen" target="_blank">Buy me a baguette!</a></p>
     </div>
   </main>
+
+  <footer>
+    <button id="color-scheme-button">
+      <img id="sun-icon" class="icon color-scheme-icon" src="../../assets/images/icons/sun.svg"
+        onerror="this.onerror=null; this.src='../../assets/images/icons/missing.svg'; this.classList.add('icon-missing')"
+        alt="">
+      <img id="moon-icon" class="icon color-scheme-icon" src="../../assets/images/icons/moon.svg"
+        onerror="this.onerror=null; this.src='../../assets/images/icons/missing.svg'; this.classList.add('icon-missing')"
+        alt="">
+    </button>
+
+    <script> // Toggles nav-lang and nav-links visibility from menu button
+      const schemeButton = document.getElementById('color-scheme-button');
+      schemeButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+      });
+    </script>
+  </footer>
+
 </body>
 
 </html>

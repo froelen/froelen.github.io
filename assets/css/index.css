@@ -1,17 +1,21 @@
 @import url('global.css');
 
-header {
+:root {
     --menu-icon-size: 24px;
     --menu-icon-padding: 2px;
     --menu-icon-border-width: 2px;
     --menu-icon-container-size: calc( var(--menu-icon-size) + 2*var(--menu-icon-padding) + 2*var(--menu-icon-border-width) + 2*var(--body-margin) );
+    
+}
+
+header {
     --title-container-width: calc(100vw - 2*var(var(--menu-container-size)));
 
     height: var(--menu-icon-container-size);
     display: flex;
     align-items: center;
     margin-top: calc(var(--menu-icon-container-size) + var(--body-margin));
-    transition: ease-out 300ms; 
+    transition: var(--transition-speed); 
 }
 
 header.collapsed {
@@ -33,7 +37,7 @@ header.collapsed {
     background: none;
     border: none;
     outline: solid 2px #F6A6FC;
-    transition: ease-out 300ms;
+    transition: var(--transition-speed);
 }
 
 #navbar-menu-button.open {
@@ -50,17 +54,19 @@ header.collapsed {
     position: absolute;
     top: 16px;
     left: 16px;
-    transition: ease-out 300ms;
+    transition: var(--transition-speed);
     --font-size: 1.2em;
     --padding-vertical: calc(calc(48px - 1.2em - 8px - 4px) / 2);
     padding: var(--padding-vertical) 0 var(--padding-vertical) 0;
 }
 
 #nav-links {
+    display: flex;
+    gap: 8px;
     position: absolute;
     top: 16px;
     right: 16px;
-    transition: ease-out 300ms;
+    transition: var(--transition-speed);
 }
 
 #nav-links.collapsed, #nav-lang.collapsed {
@@ -76,4 +82,56 @@ h2 {
     width: calc(100vw - 2*var(--body-margin) - 2*var(--menu-icon-container-size));
     text-align: center;
     font: normal 600 1.65em "Onest";
+}
+
+#color-scheme-button {
+    --button-size: calc(var(--menu-icon-size) + 2*var(--menu-icon-padding));
+    display: flex;
+    gap: 2px;
+    width: calc(2*var(--button-size) + 2px);
+    height: var(--button-size);
+    padding: 0;
+    background: none;
+    border: none;
+    outline: solid 2px #F6A6FC;
+    transition: var(--transition-speed);
+    position: relative;
+}
+
+#color-scheme-button::before {
+    --size: calc(var(--menu-icon-size) + 2*var(--menu-icon-padding));
+    content:'';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: var(--size);
+    height: var(--size);
+    transition: var(--transition-speed);
+    background: #F6A6FC75;
+}
+
+.color-scheme-icon {
+    width: var(--menu-icon-size);
+    height: var(--menu-icon-size);
+    margin: var(--menu-icon-padding);
+}
+
+/* Dark color scheme */
+.dark {
+    #menu-icon, .color-scheme-icon {
+        filter: invert(1);
+        transition: var(--transition-speed)
+    }
+
+    #github-icon {
+        content: url('../../assets/images/icons/services/github-white.svg');
+    }
+
+    #linkedin-icon {
+        content: url('../../assets/images/icons/services/linkedin-white.png');
+    }
+
+    #color-scheme-button::before {
+        left: 30px;
+    }
 }
