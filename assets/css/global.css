@@ -9,7 +9,7 @@
   /* Values */
   --body-margin: 8px;
   --transition-speed: 300ms;
-  --defaukt-radius: 8px;
+  --default-radius: 0px;
 }
 
 body {

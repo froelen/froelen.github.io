@@ -1,5 +1,5 @@
 /* Fix using if() only for blink */
-body.blink h2 {
+body.blink #title {
     width: if(
         /* When viewport is smaller than 400px, apply the fix, else use the normal value */
         /* Removes the menu button and margin widths a single time to account for longer text */
@@ -9,6 +9,6 @@ body.blink h2 {
 }
 
 /* Classic method for browser not supporting if */
-body.gecko h2, body.webkit h2 {
+body.gecko #title, body.webkit #title {
     width: calc(100vw - var(--body-margin) - var(--menu-icon-container-size));
 }
