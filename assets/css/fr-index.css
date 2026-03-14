@@ -1,4 +1,5 @@
 h2 {
-    /* Removes the menu button width only one time to account for longer text */
-    width: calc(100vw - 2*var(--body-margin) - var(--menu-icon-container-size));
+    /* Removes the menu button and margin widths a single time to account for longer text */
+    width: calc(100vw - var(--body-margin) - var(--menu-icon-container-size));
+    white-space: nowrap;
 }
