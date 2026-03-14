@@ -74,7 +74,6 @@ header.collapsed {
 
 h2 {
     width: calc(100vw - 2*var(--body-margin) - 2*var(--menu-icon-container-size));
-    /* margin: 0 calc(calc(100vw - 65vw - 2 * var(--body-margin)) / 2) 0 0;  */
     text-align: center;
     font: normal 600 1.65em "Onest";
 }
