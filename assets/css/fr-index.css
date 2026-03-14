@@ -2,8 +2,8 @@
 body.blink #title {
     width: if(
         /* When viewport is smaller than 400px, apply the fix, else use the normal value */
-        /* Removes the menu button and margin widths a single time to account for longer text */
-        media(width < 400px): calc(100vw - var(--body-margin) - var(--menu-icon-container-size));
+        /* Removes the menu button a single time to account for longer text */
+        media(width < 400px): calc(100vw - 2*var(--body-margin) - var(--menu-icon-container-size));
         else: calc(100vw - 2*var(--body-margin) - 2*var(--menu-icon-container-size));
         )
 }
