@@ -2,24 +2,69 @@
   /* Colors */
   --white: #F7F8FF;
   --white-blueish: #D8DBFF;
-  --bacl-blueish: #000212;
+  --black: #000214;
+  --black-blueish: #181952;
   --pink-bright: #F6A6FC;
 
   /* Values */
   --body-margin: 8px;
+  --transition-speed: 300ms;
+  --defaukt-radius: 8px;
 }
 
 body {
   /* Background */
-  background: linear-gradient(155deg, var(--white), var(--white-blueish));
+  /* background: linear-gradient(155deg, var(--white), var(--white-blueish)); */
+  background: transparent;
   
   /* Text */
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;
   font-family: "Firava", sans-serif;
+  color: var(--black);
 
   /* Placement */  
   margin: var(--body-margin);
+
+  /* transition: 300ms; */
+  transition: color var(--transition-speed);
 }
-  
+
+body::after {
+  /* Empty content & positionning */
+  content: '';
+  position: fixed;
+  inset: 0;
+
+  /* Behind dark scheme background */
+  z-index: -11;
+
+  background: linear-gradient(155deg, var(--white), var(--white-blueish));
+  transition: opacity var(--transition-speed);
+}
+
+/* Pseudo-element for linear-gradient() transition */
+body::before {
+  /* Empty content & positionning */
+  content: '';
+  position: fixed;
+  inset: 0;
+
+  /* Invisible & in front of normal background */
+  opacity: 0;
+  z-index: -10;
+
+  background: linear-gradient(155deg, var(--black-blueish), var(--black));
+  transition: opacity var(--transition-speed);
+}
+
+/* Dark color scheme */
+body.dark {
+  color: var(--white);
+}
+
+body.dark::before {
+  opacity: 1;
+}
+
