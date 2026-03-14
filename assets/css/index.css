@@ -5,7 +5,20 @@
     --menu-icon-padding: 2px;
     --menu-icon-border-width: 2px;
     --menu-icon-container-size: calc( var(--menu-icon-size) + 2*var(--menu-icon-padding) + 2*var(--menu-icon-border-width) + 2*var(--body-margin) );
-    
+}
+
+body {
+    min-height: calc(100vh - 2*var(--body-margin));
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+a:link {
+    color: var(--blue-bright);
+}
+
+a:visited{
+    color: var(--pink-bright)
 }
 
 header {
@@ -36,7 +49,7 @@ header.collapsed {
     padding: 0;
     background: none;
     border: none;
-    outline: solid 2px #F6A6FC;
+    outline: solid 2px var(--pink-bright);
     transition: var(--transition-speed);
     border-radius: var(--default-radius);
 }
@@ -77,6 +90,7 @@ header.collapsed {
 
 .icon {
     height: 34px;
+    user-select: none;
 }
 
 h2 {
@@ -116,10 +130,27 @@ h2 {
     border-radius: var(--default-radius);
 }
 
+footer {
+    margin: 8px;
+    display: flex;
+    column-count: 3;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
 .color-scheme-icon {
     width: var(--menu-icon-size);
     height: var(--menu-icon-size);
     margin: var(--menu-icon-padding);
+}
+
+#map {
+    text-align: right;
+}
+
+a {
+    text-decoration: none;;
 }
 
 /* Dark color scheme */
