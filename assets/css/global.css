@@ -8,7 +8,12 @@
   --pink-bright: #F6A6FC;
   --blue-bright: #515CF6;
 
+  --light-background: linear-gradient(var(--angle), var(--white), var(--white-blueish));
+  --dark-background: linear-gradient(var(--angle), var(--black-blueish), var(--black));
+  --bright-background: linear-gradient(var(--angle), var(--pink-bright) 30%, var(--blue-bright));
+
   /* Values */
+  --angle: 155deg;
   --body-margin: 8px;
   --transition-speed: 300ms;
   --default-radius: 0px;
@@ -42,7 +47,7 @@ body::after {
   /* Behind dark scheme background */
   z-index: -11;
 
-  background: linear-gradient(155deg, var(--white), var(--white-blueish));
+  background: var(--light-background);
   transition: opacity var(--transition-speed);
 }
 
@@ -57,7 +62,7 @@ body::before {
   opacity: 0;
   z-index: -10;
 
-  background: linear-gradient(155deg, var(--black-blueish), var(--black));
+  background: var(--dark-background);
   transition: opacity var(--transition-speed);
 }
 

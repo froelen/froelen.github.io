@@ -102,6 +102,85 @@ h2 {
     width: calc(100vw - 2*var(--body-margin) - 2*var(--menu-icon-container-size));
 }
 
+#portfolio {
+    display: flex;
+    flex-direction: column;
+}
+
+#portfolio h2 {
+    margin: 0;
+}
+
+.tile-list {
+    padding: 0;
+    margin: 8px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.pf-card {
+    --padding: 4px;
+    --image-height: 128px;
+    --title-size: 1.3em;
+    --title-margins: 10px;
+    --n-lines: 3;
+    --line-height: 1.4em;
+
+    --element-height: calc(var(--image-height) + var(--title-size) + 2*var(--title-margins) + var(--n-lines)*var(--line-height));
+
+    display: flex;
+    padding: var(--padding);
+    margin: 8px 0;
+    border-radius: var(--default-radius);
+
+    background: var(--bright-background);
+    width: 100%;
+
+    transition: width var(--transition-speed);
+
+    /* height: var(--element-height); */
+
+    img {
+        height: var(--image-height);
+    }
+
+    h3 {
+        margin: var(--title-margins) 0;
+    }
+
+    a {
+        line-height: var(--line-height);
+        padding: 4px;
+        width: 100%;
+        /* background: var(--light-background); */
+
+        display: block;
+        position: relative;
+        isolation: isolate;
+    }
+
+    a::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        background: var(--light-background);
+        transition: opacity var(--transition-speed);
+    }
+
+    a::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        opacity: 0;
+        background: var(--dark-background);
+        transition: opacity var(--transition-speed);
+    }
+}
+
 #color-scheme-button {
     --button-size: calc(var(--menu-icon-size) + 2*var(--menu-icon-padding));
     display: flex;
@@ -171,4 +250,30 @@ a {
     #color-scheme-button::before {
         left: 30px;
     }
+
+    .pf-card a::before {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    :root {
+    --columns: 2;
+    /* columns (colored borders) + n-1 columns (space between columns*/
+    --n-margins: calc(2*var(--columns) - 1);
+    }
+
+    .pf-card {
+        width: calc((100% - var(--n-margins)*var(--body-margin)) / var(--columns));;
+    }
+}
+
+@media screen and (min-width: 1190px) {
+    .pf-card {
+        --columns: 4;
+        /* n columns (colored borders) + n-1 columns (space between columns*/
+        --n-margins: calc(2*var(--columns) - 1);
+        width: calc((100% - var(--n-margins)*var(--body-margin)) / var(--columns));;
+    }
+    
 }
