@@ -181,7 +181,7 @@ h2 {
         transition: opacity var(--transition-speed);
     }
 
-    a:link {
+    a:link, a:visited {
         text-decoration: none;
         color: var(--black);
     } 
