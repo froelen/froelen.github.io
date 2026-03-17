@@ -180,6 +180,11 @@ h2 {
         background: var(--dark-background);
         transition: opacity var(--transition-speed);
     }
+
+    a:link {
+        text-decoration: none;
+        color: var(--black);
+    } 
 }
 
 #color-scheme-button {
