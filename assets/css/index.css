@@ -122,7 +122,7 @@ h2 {
 
 .pf-card {
     --padding: 4px;
-    --image-height: 128px;
+    --image-height: 180px;
     --title-size: 1.3em;
     --title-margins: 10px;
     --n-lines: 3;
@@ -184,6 +184,7 @@ h2 {
     a:link, a:visited {
         text-decoration: none;
         color: var(--black);
+        transition: color var(--transition-speed);
     } 
 }
 
@@ -260,6 +261,12 @@ a {
     /* Temporary dark theme replacement, will be removed once portfolio items get their previews */
     .pf-card img {
         content: url('../../assets/images/portfolio/missing/card-black.webp');
+    }
+
+    .pf-card {
+        a:link, a:visited {
+            color: var(--white);
+        } 
     }
 
     .pf-card a::before {
