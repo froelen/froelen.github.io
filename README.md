@@ -41,6 +41,7 @@ If you wish to work on this website as well, it is recommended to have the same 
 ### froelen's Static website generator usage
 
 You can build new pages from templates using the following command. Make sure to check which templates you're generating (`--templates`) and in which languages (`--languages`).
+
 `user@machine:~/path/to/dev-env/` `python3 ./static-website-generator/ssg.py --languages='en,fr' --translations-dir='./assets/ssg-lang/' --templates='index' --templates-dir='./assets/ssg-templates/' --output-dir='./'`
 
 For details, refer to froelen's SSG documentation.
@@ -48,5 +49,7 @@ For details, refer to froelen's SSG documentation.
 ### Localhost
 
 You can easily launch a locally hosted version of the website to visualize it at any moment, simply run the following command:
+
 `user@machine:~/path/to/dev-env/` `node localhost.js`
+
 Note that this script also automatically launches a build script using froelen's SSG (assuming it is located in the correct place in the file structure as described earlier).
