@@ -1,11 +1,5 @@
 @import url('global.css');
 
-body {
-    min-height: calc(100vh - 2*var(--body-margin));
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-}
-
 #portfolio {
     display: flex;
     flex-direction: column;

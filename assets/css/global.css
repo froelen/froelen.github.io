@@ -50,6 +50,11 @@ body {
 
   /* transition: 300ms; */
   transition: color var(--transition-speed);
+
+  /* Display */
+  min-height: calc(100vh - 2*var(--body-margin));
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 body::after {
