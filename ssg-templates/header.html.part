@@ -1,0 +1,25 @@
+<header class="site-header">
+  <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/guides">Guides</a></li>
+      <li><a href="/guides/files-and-formats">Files and formats</a></li>
+      <li><a href="/guides/files-and-formats/audio">Audio</a></li>
+      <li aria-current="page">Simply put</li>
+    </ol>
+  </nav>
+
+  <h1 class="site-title">Guide Title</h1>
+
+  <nav class="social-nav" aria-label="Social Links">
+  </nav>
+</header>
+
+<style>
+  .breadcrumb-nav li:not(:last-child)::after {
+    content: "›";
+    /* Screen readers won't announce this */
+    margin: 0 8px;
+    color: #666;
+  }
+</style>

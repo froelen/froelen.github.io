@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+
+<head>
+  <!-- Sets default and correct encoding and viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title and description -->
+  <title>{{head.title}}</title>
+  <meta name="description" content="{{head.description}}">
+
+  <!-- SEO meta tags for search engines indexation and score optimisation -->
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <link rel="canonical" href="https://{{url}}/{{lang}}/">
+
+  <!-- Open Graph meta tags for social media sharing -->
+  <meta property="og:title" content="{{head.og:title}}">
+  <meta property="og:description" content="{{head.og:description}}">
+  <meta property="og:url" content="https://{{url}}/{{lang}}/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://{{url}}/assets/images/og-image.jpg">
+  <meta property="og:locale" content="{{head.og:locale}}">
+
+  <!-- Alternate language versions for SEO and user experience -->
+  <link rel="alternate" hreflang="{{lang}}" href="https://{{url}}/{{lang}}/">
+  <link rel="alternate" hreflang="{{lang.alt.1}}" href="https://{{url}}/{{lang.alt.1}}/">
+  <link rel="alternate" hreflang="x-default" href="https://{{url}}/en/">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/fonts.css">
+  <link rel="stylesheet" href="../assets/css/global.css">
+  <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="../assets/css/{{lang}}-index.css">
+
+  <link rel="preload" href="../assets/css/fonts.css" as="style">
+  <link rel="preload" href="../assets/css/global.css" as="style">
+  <link rel="preload" href="../assets/css/index.css" as="style">
+
+  <!-- Scripts -->
+  <script src="../assets/js/scripts.js" defer></script>
+
+  <!-- Metadata for SEO & web crawlers and copyright information -->
+  <meta name="author" content="froelen">
+  <meta name="copyright" content="© 2026 froelen">
+  <meta name="google" content="notranslate"> <!-- Prevents Google from translating the page -->
+  <meta name="theme-color" content="#F7F8FF"> <!-- Sets the theme color for browsers that support it -->
+</head>
+
+<body>
+  <h1 hidden>{{h1}}</h1>
+
+  <header id="header" class="collapsed"> <!-- Top bar elements -->
+    <nav id="navbar"> <!-- Navigation bar -->
+      <div id="navbar-menu"> <!-- Collapsible menu button -->
+        <button id="navbar-menu-button"><img id="menu-icon" class="icon" src="../../assets/images/icons/menu.svg"
+            onerror="this.onerror=null; this.src='../../assets/images/icons/missing.svg'; this.classList.add('icon-missing')"
+            alt="{{nav.menu.alt}}"></button>
+      </div>
+
+      <div id="nav-lang" class="header-left collapsed"> <!-- Language options -->
+        {{lang.name}} | <a href="../{{lang.alt.1}}/">{{lang.alt.1.name}}</a>
+      </div>
+
+      <div id="nav-links" class="header-right collapsed"> <!-- External links -->
+        <a href="../../github.html" target="_blank">
+          <img id="github-icon" class="icon" src="../../assets/images/icons/services/github.svg"
+            onerror="this.onerror=null; this.src='../../assets/images/icons/missing.svg'; this.classList.add('icon-missing')"
+            alt="{{nav.links.github.alt}}"></a>
+        <a href="../../linkedin.html" target="_blank">
+          <img id="linkedin-icon" class="icon" src="../../assets/images/icons/services/linkedin.png"
+            onerror="this.onerror=null; this.src='../../assets/images/icons/missing.svg'; this.classList.add('icon-missing')"
+            alt="{{nav.links.linkedin.alt}}"></a>
+      </div>
+
+      <script> // Toggles nav-lang and nav-links visibility from menu button
+        const menuButton = document.getElementById('navbar-menu-button');
+        menuButton.addEventListener('click', () => {
+          menuButton.classList.toggle('open')
+          document.getElementById('header').classList.toggle('collapsed');
+          document.getElementById('nav-lang').classList.toggle('collapsed');
+          document.getElementById('nav-links').classList.toggle('collapsed');
+        });
+      </script>
+    </nav>
+
+    <h2 id="title"> <!-- Catchphrase title -->
+      <span id="title-greet">{{title.greet}}</span>
+      <span id="title-username">froelen</span>
+    </h2>
+  </header>
+
+  <main>
+    <div id="introduction">
+      <p>{{content-intro-main}}</p>
+      <!-- <p>{{content-intro-links}}</p> -->
+    </div>
+
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <ul class="tile-list">
+        <li class="pf-card"><a href="https://froelen.is-a.dev">
+            <img src="../../assets/images/portfolio/wesbite/card.webp"
+              onerror="this.onerror=null; this.src='../../assets/images/portfolio/missing/card.webp';">
+            <h3>{{pf.website.h3}}</h3>
+            {{pf.website}}
+          </a></li>
+
+        <li class="pf-card"> <a href="https://github.com/froelen/static-website-generator" target="_blank">
+            <img src="../../assets/images/portfolio/ssg/card.webp"
+              onerror="this.onerror=null; this.src='../../assets/images/portfolio/missing/card.webp';">
+            <h3>{{pf.ssg.h3}}</h3>
+            {{pf.ssg}}
+          </a></li>
+
+        <li class="pf-card"><a href="https://github.com/dumbgeniuses/pendu" target="_blank">
+            <img src="../../assets/images/portfolio/hangman/card.webp"
+              onerror="this.onerror=null; this.src='../../assets/images/portfolio/missing/card.webp';">
+            <h3>{{pf.hangman.h3}}</h3>
+            {{pf.hangman}}
+          </a></li>
+
+        <li class="pf-card"><a href="https://github.com/froelen/conways-game-of-life" target="_blank">
+            <img src="../../assets/images/portfolio/conway/card.webp"
+              onerror="this.onerror=null; this.src='../../assets/images/portfolio/missing/card.webp';">
+            <h3>{{pf.conway.h3}}</h3>
+            {{pf.conway}}
+          </a></li>
+
+        <li class="pf-card"><a href="https://github.com/froelen/bataille-cartes" target="_blank">
+            <img src="../../assets/images/portfolio/battle/card.webp"
+              onerror="this.onerror=null; this.src='../../assets/images/portfolio/missing/card.webp';">
+            <h3>{{pf.battle.h3}}</h3>
+            {{pf.battle}}
+          </a></li>
+
+        <li class="pf-card"><a href="https://github.com/dumbgeniuses/python-craft" target="_blank">
+            <img src="../../assets/images/portfolio/pycraft/card.webp"
+              onerror="this.onerror=null; this.src='../../assets/images/portfolio/missing/card.webp';">
+            <h3>{{pf.pycraft.h3}}</h3>
+            {{pf.pycraft}}
+          </a></li>
+
+        <li class="pf-card"><a href="https://modrinth.com/mod/doa8bw" target="_blank">
+            <img src="../../assets/images/portfolio/doa8bw/card.webp"
+              onerror="this.onerror=null; this.src='../../assets/images/portfolio/missing/card.webp';">
+            <h3>{{pf.doa8bw.h3}}</h3>
+            {{pf.doa8bw}}
+          </a></li>
+
+        <li class="pf-card"><a href="https://aetherian.miraheze.org" target="_blank">
+            <img src="../../assets/images/portfolio/wiki/card.webp"
+              onerror="this.onerror=null; this.src='../../assets/images/portfolio/missing/card.webp';">
+            <h3>{{pf.wiki.h3}}</h3>
+            {{pf.wiki}}
+          </a></li>
+
+        <li class="pf-card"><a href="https://github.com/froelen/useful-guides" target="_blank">
+            <img src="../../assets/images/portfolio/cheat-sheets/card.webp"
+              onerror="this.onerror=null; this.src='../../assets/images/portfolio/missing/card.webp';">
+            <h3>{{pf.cheat-sheets.h3}}</h3>
+            {{pf.cheat-sheets}}
+          </a></li>
+
+        <li class="pf-card"><a href="https://github.com/froelen/useful-guides/tree/main/programming-languages/css"
+            target="_blank">
+            <img src="../../assets/images/portfolio/guides/card.webp"
+              onerror="this.onerror=null; this.src='../../assets/images/portfolio/missing/card.webp';">
+            <h3>{{pf.guides.h3}}</h3>
+            {{pf.guides}}
+          </a></li>
+      </ul>
+    </section>
+
+    <div id="supporters">
+      <p>{{supporters-thanks}}</p>
+      <ul>
+        <li>Kirbday</li>
+      </ul>
+      <p><a href="https://ko-fi.com/froelen" target="_blank">{{supporters-cta}}</a></p>
+    </div>
+  </main>
+
+  <footer>
+    <button id="color-scheme-button">
+      <img id="sun-icon" class="icon color-scheme-icon" src="../../assets/images/icons/sun.svg"
+        onerror="this.onerror=null; this.src='../../assets/images/icons/missing.svg'; this.classList.add('icon-missing')"
+        alt="{{footer.sun}}">
+      <img id="moon-icon" class="icon color-scheme-icon" src="../../assets/images/icons/moon.svg"
+        onerror="this.onerror=null; this.src='../../assets/images/icons/missing.svg'; this.classList.add('icon-missing')"
+        alt="{{footer.moon}}">
+    </button>
+
+    <p id="copyright">© 2026 - froelen<br>{{footer.credits}}</a></p>
+
+    <div id="map">
+      <p>
+        <a href="#about">{{footer.map.about}}</a><br>
+        <a href="#portfolio">{{footer.map.portfolio}}</a><br>
+        <!-- <a href="links.html">{{footer.map.links}}</a><br> -->
+        <a href="https://github.com/froelen/froelen.github.io" target="_blank">{{footer.map.repo}}</a><br>
+      </p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
