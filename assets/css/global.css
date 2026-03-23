@@ -19,6 +19,14 @@
   --default-radius: 0px;
 }
 
+a:link {
+  color: var(--blue-bright);
+}
+
+a:visited{
+  color: var(--pink-bright)
+}
+
 body {
   /* Background */
   /* background: linear-gradient(155deg, var(--white), var(--white-blueish)); */
@@ -64,6 +72,88 @@ body::before {
 
   background: var(--dark-background);
   transition: opacity var(--transition-speed);
+}
+
+/* Header style */
+header {
+  --title-container-width: calc(100vw - 2*var(var(--menu-container-size)));
+
+  height: var(--menu-icon-container-size);
+  display: flex;
+  align-items: center;
+  margin-top: calc(var(--menu-icon-container-size) + var(--body-margin));
+  transition: var(--transition-speed); 
+}
+
+header.collapsed {
+  margin: 0;
+}
+
+#navbar-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--menu-icon-container-size);
+}
+
+#navbar-menu-button {
+  --button-size: calc(var(--menu-icon-size) + 2*var(--menu-icon-padding));
+  width: var(--button-size);
+  height: var(--button-size);
+  padding: 0;
+  background: none;
+  border: none;
+  outline: solid 2px var(--pink-bright);
+  transition: var(--transition-speed);
+  border-radius: var(--default-radius);
+}
+
+#navbar-menu-button.open {
+  transform: rotate(90deg);
+}
+
+#menu-icon {
+  height: var(--menu-icon-size);
+  width: var(--menu-icon-size);
+  padding: var(--menu-icon-padding);
+}
+
+#nav-lang {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  transition: var(--transition-speed);
+  --font-size: 1.2em;
+  --padding-vertical: calc(calc(48px - 1.2em - 8px - 4px) / 2);
+  padding: var(--padding-vertical) 0 var(--padding-vertical) 0;
+}
+
+#nav-links {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  transition: var(--transition-speed);
+}
+
+#nav-links.collapsed, #nav-lang.collapsed {
+  position: absolute;
+  transform: translateY(calc(0px - var(--menu-icon-container-size) - var(--body-margin)));
+}
+
+.icon {
+  height: 34px;
+  user-select: none;
+}
+
+h2 {
+  font: normal 600 1.65em "Onest";
+  text-align: center;
+}
+
+#title {
+  width: calc(100vw - 2*var(--body-margin) - 2*var(--menu-icon-container-size));
 }
 
 /* Dark color scheme */
