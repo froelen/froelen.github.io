@@ -143,7 +143,7 @@ header.collapsed {
   transition: var(--transition-speed);
 }
 
-#nav-links.collapsed, .nav-lang.collapsed {
+#nav-links.collapsed, .header-left.collapsed {
   position: absolute;
   transform: translateY(calc(0px - var(--menu-icon-container-size) - var(--body-margin)));
 }
