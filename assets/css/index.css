@@ -1,12 +1,5 @@
 @import url('global.css');
 
-:root {
-    --menu-icon-size: 24px;
-    --menu-icon-padding: 2px;
-    --menu-icon-border-width: 2px;
-    --menu-icon-container-size: calc( var(--menu-icon-size) + 2*var(--menu-icon-padding) + 2*var(--menu-icon-border-width) + 2*var(--body-margin) );
-}
-
 body {
     min-height: calc(100vh - 2*var(--body-margin));
     display: grid;

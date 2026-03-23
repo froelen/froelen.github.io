@@ -17,6 +17,12 @@
   --body-margin: 8px;
   --transition-speed: 300ms;
   --default-radius: 0px;
+
+  /* Header */
+  --menu-icon-size: 24px;
+  --menu-icon-padding: 2px;
+  --menu-icon-border-width: 2px;
+  --menu-icon-container-size: calc( var(--menu-icon-size) + 2*var(--menu-icon-padding) + 2*var(--menu-icon-border-width) + 2*var(--body-margin) );
 }
 
 a:link {
