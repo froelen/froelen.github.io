@@ -1,10 +1,10 @@
 # froelen's website
 
-Repository: froelen.github.io ([github.com/froelen/froelen.github.io]( https://github.com/froelen/froelen.github.io ))
+Repository: [github.com/froelen/froelen.github.io]( https://github.com/froelen/froelen.github.io )
 
 Url: [froelen.is-a.dev]( https://froelen.is-a.dev ) (backup: [froelen.github.io]( https://froelen.github.io ))
 
-Generated using froelen's [static website generator]( https://github.com/froelen/static-website-generator )!
+*Generated using froelen's [static website generator]( https://github.com/froelen/static-website-generator )!*
 
 ---
 
