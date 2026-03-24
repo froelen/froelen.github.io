@@ -10,13 +10,13 @@ Url: [froelen.is-a.dev]( https://froelen.is-a.dev ) (backup: [froelen.github.io]
 
 This website was created and is owned, maintained, and used by myself :)
 
-Feel free to use parts of its code or its design as inspiration for your own projects, although if you end up using it, I'd appreciate to be credited where and when necesary ^^
+Feel free to use parts of its code or its design as inspiration for your own projects, although if you end up using it, I'd appreciate to be credited where and when necessary ^^
 
 ## Development environment
 
-### File stucture
+### File structure
 
-The development environment of this wesbite looks like this:
+The development environment of this website looks like this:
 
 ```
 dev-env/
@@ -42,7 +42,10 @@ If you wish to work on this website as well, it is recommended to have the same 
 
 You can build new pages from templates using the following command. Make sure to check which templates you're generating (`--templates`) and in which languages (`--languages`).
 
-`user@machine:~/path/to/dev-env/` `python3 ./static-website-generator/ssg.py --languages='en,fr' --translations-dir='./assets/ssg-lang/' --templates='index' --templates-dir='./assets/ssg-templates/' --output-dir='./'`
+```sh
+# From ~/path/to/dev-env/
+python3 ./static-website-generator/ssg.py --languages='en,fr' --translations-dir='./assets/ssg-lang/' --templates='index' --templates-dir='./assets/ssg-templates/' --output-dir='./'
+```
 
 For details, refer to froelen's SSG documentation.
 
@@ -50,6 +53,11 @@ For details, refer to froelen's SSG documentation.
 
 You can easily launch a locally hosted version of the website to visualize it at any moment, simply run the following command:
 
-`user@machine:~/path/to/dev-env/` `node localhost.js`
+```sh
+# From ~/path/to/dev-env/
+node ./froelen.github.io/localhost.js
+```
 
-Note that this script also automatically launches a build script using froelen's SSG (assuming it is located in the correct place in the file structure as described earlier).
+Notes:
+- This script requires the [Express]( https://www.npmjs.com/package/express ) npm package!
+- This script requires froelen's SSG at the directory indicated earlier, as it triggers a build when run.
