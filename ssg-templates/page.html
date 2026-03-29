@@ -52,16 +52,16 @@
 
   <header id="header">
     <button id="nav-button-collapse" class="nav-button">
-      <img class="icon" src="../assets/images/icons/menu.svg"
+      <img class="icon" src="../assets/images/icons/menu.svg" draggable="false"
         onerror="this.onerror=null; this.src='../../assets/images/icons/missing.svg'; this.classList.add('icon-missing')"
         alt="{{header.nav-button-collapse.alt}}">
     </button>
 
     <nav id="breadcrumb-nav" class="breadcrumb-nav" aria-label="Breadcrumb">
       <ol>
-        <li><a href="/">{{header.breadcrumb.home}}</a></li>
-        <li><a href="/example">{{header.breadcrumb.1}}</a></li>
-        <li><a href="/example/of-a">{{header.breadcrumb.2}}</a></li>
+        <li><a href="/en">{{header.breadcrumb.home}}</a></li>
+        <li><a href="/en/example-of">{{header.breadcrumb.1}}</a></li>
+        <li><a href="/en/example/a-path-to">{{header.breadcrumb.2}}</a></li>
         <li aria-current="page">{{header.breadcrumb.page}}</li>
       </ol>
     </nav>
@@ -97,10 +97,10 @@
 
   <footer>
     <button id="color-scheme-button" class="nav-button">
-      <img id="sun-icon" class="icon color-scheme-icon" src="../../assets/images/icons/sun.svg"
+      <img id="sun-icon" class="icon color-scheme-icon" src="../../assets/images/icons/sun.svg" draggable="false"
         onerror="this.onerror=null; this.src='../../assets/images/icons/missing.svg'; this.classList.add('icon-missing')"
         alt="{{footer.scheme.sun}}">
-      <img id="moon-icon" class="icon color-scheme-icon" src="../../assets/images/icons/moon.svg"
+      <img id="moon-icon" class="icon color-scheme-icon" src="../../assets/images/icons/moon.svg" draggable="false"
         onerror="this.onerror=null; this.src='../../assets/images/icons/missing.svg'; this.classList.add('icon-missing')"
         alt="{{footer.scheme.moon}}">
     </button>

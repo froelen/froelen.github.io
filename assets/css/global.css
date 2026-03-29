@@ -21,11 +21,14 @@
   --icon-container-height: calc(var(--icon-size) + var(--body-margin)/2);  /* A quarter of --body-margin serves as 'padding' between icon and outline */
   --icon-size: 32px;
 
-  /* Header */
-  --menu-icon-size: 24px;
-  --menu-icon-padding: 2px;
-  --menu-icon-border-width: 2px;
-  --menu-icon-container-size: calc( var(--menu-icon-size) + 2*var(--menu-icon-padding) + 2*var(--menu-icon-border-width));
+  --content-max-width: 1080px;
+}
+
+header, main, footer {
+  position: relative;
+  max-width: var(--content-max-width);
+  left: 50%;
+  transform: translateX(-50%);
 
 }
 
@@ -112,14 +115,16 @@ header {
   --h1-line-height: calc(1.75rem + var(--body-margin));
   /* --title-container-width: calc(100vw - 2*var(var(--menu-container-size))); */
 
+  gap: var(--body-margin);
+
   margin: 0 0 var(--body-margin);
 
   display: flex;
   flex-direction: column;
-  transition: var(--transition-speed); 
+  transition: var(--transition-speed);
 
   h1 {
-    margin: var(--body-margin) 0 0;
+    margin: 0;
     font: normal 700 1.75rem "Onest", serif;
     text-align: left;
     line-height: var(--h1-line-height);
@@ -131,11 +136,6 @@ header.open {
 
   .nav-button {
     transform: rotate(90deg);
-  }
-
-  .social-nav {
-    /* transform: translateY(calc(0px - var(--menu-icon-container-size) - var(--body-margin))); */
-    position: relative;
   }
 }
 
@@ -171,21 +171,21 @@ header.open {
 
 /*/ Social links /*/
 .social-nav {
-  position: relative;
-  top: calc(0px - calc(var(--h1-line-height) + var(--body-margin) + var(--icon-container-height)));
-  transform: translateY(var(--body-margin-quarter));
-  align-items: center;
-  justify-content: right;
+  position: absolute;
+  right: 0;
+  
   display: flex;
+  align-items: center;
   gap: var(--body-margin);
-  transition: transform var(--transition-speed);
-  width: fit-content;
-  left: calc(100vw - 2*var(--body-margin) - 2*var(--icon-container-height));
+  /* transform: translateY(var(--body-margin-quarter)); */
+  height: var(--icon-container-height);
+}
 
-  a {
-    height: 0px; /* No impact on icon size & prevents unwanted taken space beneath title */
-    width: var(--icon-size);
-  }
+.social-nav a {
+  height: var(--icon-size);
+  width: var(--icon-size);
+  display: flex;
+  align-items: center;
 }
 
 /* MAIN */
@@ -198,8 +198,12 @@ footer {
   display: flex;
   column-count: 3;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   text-align: center;
+
+  p {
+    margin: 0;
+  }
 }
 
 /*/ Color scheme button /*/
@@ -246,4 +250,51 @@ html.dark {
 
 html.dark body::before {
   opacity: 1;
+}
+
+@media screen and (min-width: 700px) { 
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    h1 {
+      flex: 1;
+    }
+    }
+
+    .breadcrumb-nav {
+      transform: translateY(calc(0px - var(--icon-container-height) - 4px));
+    }
+
+    .social-nav {
+      position: static;
+    }
+  }
+
+
+
+/* min-width: calc(var(content-max-width) + 300px) */
+@media screen and (min-width: 1380px) {
+  header.open {
+    margin-top: 0;
+  }
+
+  #nav-button-collapse {
+    display: none;
+  }
+
+  .breadcrumb-nav {
+    position: absolute;
+    transform: none;
+    top: 0;
+    left: var(--body-margin);
+    transform: translateX(calc(0px - calc(100vw - var(--content-max-width)) / 2));
+    padding: 0;
+
+    ol {
+      display: initial;
+    }
+  }
 }
