@@ -88,11 +88,6 @@
 
 /* Dark color scheme */
 .dark {
-    /* Temporary dark theme replacement, will be removed once portfolio items get their previews */
-    .pf-card img {
-        content: url('../../assets/images/portfolio/missing/card-black.webp');
-    }
-
     .pf-card {
         a:link, a:visited {
             color: var(--white);
