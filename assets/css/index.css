@@ -111,13 +111,3 @@
         width: calc((100% - var(--n-margins)*var(--body-margin)) / var(--columns));;
     }
 }
-
-@media screen and (min-width: 1190px) {
-    .pf-card {
-        --columns: 4;
-        /* n columns (colored borders) + n-1 columns (space between columns*/
-        --n-margins: calc(2*var(--columns) - 1);
-        width: calc((100% - var(--n-margins)*var(--body-margin)) / var(--columns));;
-    }
-    
-}
