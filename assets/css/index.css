@@ -43,6 +43,7 @@
     img {
         max-width: 100%;
         height: var(--image-height);
+        object-fit: cover;
     }
 
     h3 {
