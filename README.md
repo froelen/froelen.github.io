@@ -20,7 +20,7 @@ The development environment of this website looks like this:
 
 ```
 dev-env/
-↳ static-website-generator/  # Cloned from https://github.com/froelen/static-website-generator
+↳ static-website-generator/  # Cloned from git@github.com:froelen/static-website-generator.git
   ↳ ssg.py
 
 ↳ froelen.github.io/  # Website directory
@@ -44,7 +44,7 @@ You can build new pages from templates using the following command. Make sure to
 
 ```sh
 # From ~/path/to/dev-env/
-python3 ./static-website-generator/ssg.py --languages='en,fr' --translations-dir='./assets/ssg-lang/' --templates='index' --templates-dir='./assets/ssg-templates/' --output-dir='./'
+python3 ./static-website-generator/ssg.py --languages='en,fr' --translations-dir='./froelen.github.io/ssg-lang/' --templates='index' --templates-dir='./froelen.github.io/ssg-templates/' --output-dir='./froelen.github.io/'
 ```
 
 For details, refer to froelen's SSG documentation.
