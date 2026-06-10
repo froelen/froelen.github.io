@@ -8,10 +8,10 @@ try {
   
   // Replace 'script.py' with the actual path to your script
   // Use path.join to ensure it works regardless of where you launch the terminal
-  const pythonPath = '../static-website-generator/ssg.py'; 
+  const pythonPath = './static-website-generator/ssg.py'; 
   
   // Execute the script. 'stdio: inherit' prints Python's output to YOUR terminal.
-  execSync(`python3 "${pythonPath}" --languages='en,fr' --translations-dir='./ssg-lang/' --templates='index' --templates-dir='./ssg-templates/' --output-dir='./'`, { stdio: 'inherit' });
+  execSync(`python3 "${pythonPath}" --languages='en,fr' --translations-dir='./froelen.github.io/ssg-lang/' --templates='index,credits,quotes,start' --templates-dir='./froelen.github.io/ssg-templates/' --output-dir='./froelen.github.io/'`, { stdio: 'inherit' });
   
   console.log('[INFO] Static site generation successfull.');
 } catch (error) {
@@ -24,7 +24,8 @@ const staticOptions = {
   extensions: ['html', 'htm'],
   index: 'index.html'
 };
-app.use('/', express.static('./', staticOptions));
+const path = require('path');
+app.use('/', express.static(path.join(__dirname), staticOptions));
 
 app.listen(8080, '0.0.0.0', () => {
   console.log('[INFO] Server running at http://localhost:8080 and <your-ip>:8080');
