@@ -156,5 +156,30 @@
     "footer.map.about": "About",
     "footer.map.links": "Links",
     "footer.map.repo": "Repository"
+  },
+  "start": {
+    "lang": "en",
+    "lang.alt.1": "fr",
+    "url": "froelen.is-a.dev",
+    "page": "page",
+    "head.title":"Start",
+    "head.decription": "Custom start page",
+    "head.og:title": "Start",
+    "head.og:description": "Custom-made home page by anf for froelen.",
+    "head.og:locale": "en_US",
+    "header.nav-button-collapse.alt": "Menu button",
+    "header.breadcrumb.home": "Home",
+    "header.breadcrumb.page": "Start",
+    "header.h1": "Start",
+    "header.social.github.alt": "Visit my GitHub profile.",
+    "header.social.linkedin.alt": "Visit my LinkedIn page.",
+    "search.bar.placeholder": "Search with Startpage",
+    "search.icon.alt": "Search",
+    "footer.scheme.sun": "Toggle color scheme.",
+    "footer.scheme.moon": "Toggle color scheme.",
+    "footer.credits": "Credits",
+    "footer.map.about": "About",
+    "footer.map.links": "Links",
+    "footer.map.repo": "Repository"
   }
 }
