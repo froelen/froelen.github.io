@@ -61,3 +61,11 @@ node ./froelen.github.io/localhost.js
 Notes:
 - This script requires the [Express]( https://www.npmjs.com/package/express ) npm package!
 - This script requires froelen's SSG at the directory indicated earlier, as it triggers a build when run.
+
+## Future
+
+To do :
+- Design system documentation
+- Links page
+- Start/Homepage (then, customizable)
+- Quotes design
